@@ -42,10 +42,10 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/jquery.validate.js',
-		'app/libs/jquery.mask.min.js',
-		'app/libs/jquery.popupoverlay.js',
-		'app/libs/swiper/swiper.min.js',
+		// 'app/libs/jquery.validate.js',
+		// 'app/libs/jquery.mask.min.js',
+		// 'app/libs/jquery.popupoverlay.js',
+		// 'app/libs/swiper/swiper.min.js',
 		// 'app/libs/fancybox/jquery.fancybox.js',
 		'app/js/common.js', // Always at the end
 		])

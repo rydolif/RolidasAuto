@@ -54,16 +54,15 @@
 			letter-spacing: 1px
 			line-height: 1
 			font-weight: 400
-
+			&:hover
+				color: $accent
+			&:focus
+				color: $accent
 	a
 		font-family: $title
 		text-decoration: none
 		color: #fff
-		transition: all .3s
-		&:hover
-			color: $accent
-		&:focus
-			color: $accent
+
 
 .logo
 	width: 163px
@@ -85,6 +84,10 @@
 	margin-bottom: 10px
 	line-height: 1
 	letter-spacing: 0.83px
+	&:hover
+		color: $accent
+	&:focus
+		color: $accent
 
 .header
 	padding-top: 60px
@@ -125,20 +128,19 @@
 				margin-right: 0
 
 
-		a
-			text-decoration: none
-			text-transform: uppercase
-			font-family: $title
-			color: $text
-			font-size: 15px
-			font-weight: 600
-			letter-spacing: 1px
-			line-height: 1
-			transition: all .3s
-			&:hover
-				color: $accent
-			&:focus
-				color: $accent
+			a
+				text-decoration: none
+				text-transform: uppercase
+				font-family: $title
+				color: $text
+				font-size: 15px
+				font-weight: 600
+				letter-spacing: 1px
+				line-height: 1
+				&:hover
+					color: $accent
+				&:focus
+					color: $accent
 
 		&_soc
 			position: relative
@@ -159,11 +161,18 @@
 				position: relative
 				color: $text
 				margin-right: 12px
+				&:hover
+					i
+						color: $accent
+				&:focus
+					i
+						color: $accent
 				&:last-child
 					margin-right: 0
 
 			i
 				font-size: 20px
+				transition: all .3s
 	
 	&__content
 		h1
