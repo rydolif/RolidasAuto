@@ -59,6 +59,11 @@
 		font-family: $title
 		text-decoration: none
 		color: #fff
+		transition: all .3s
+		&:hover
+			color: $accent
+		&:focus
+			color: $accent
 
 .logo
 	width: 163px
@@ -103,6 +108,9 @@
 			position: relative
 			padding-bottom: 15px
 			margin-right: 60px
+			&:hover
+				&:before
+					background-color: $accent
 			&::before
 				content: ""
 				position: absolute
@@ -116,6 +124,7 @@
 			&:last-child
 				margin-right: 0
 
+
 		a
 			text-decoration: none
 			text-transform: uppercase
@@ -125,6 +134,11 @@
 			font-weight: 600
 			letter-spacing: 1px
 			line-height: 1
+			transition: all .3s
+			&:hover
+				color: $accent
+			&:focus
+				color: $accent
 
 		&_soc
 			position: relative
@@ -256,7 +270,7 @@
 
 	&__wrap
 		background-color: #eef1f6
-		height: 370px
+		height: 390px
 
 	h2
 		margin-left: 105px
@@ -275,7 +289,7 @@
 		right: 0
 		width: 100%
 		height: 100%
-	
+
 	p
 		color: #fff
 		font-size: 18px
