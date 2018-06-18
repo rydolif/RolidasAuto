@@ -1,0 +1,355 @@
+@import "libs"
+@import "base"
+@import "page"
+
+.wrapper
+	position: relative
+	width: 100%
+	margin-left: 240px
+
+.container
+	max-width: 1100px
+	margin-left: 90px
+	&-left
+		margin-left: 0
+		max-width: 1190px
+		padding-left: 0
+
+.nav
+	position: fixed
+	left: 0
+	top: 0
+	overflow: auto
+	width: 240px
+	height: 100%
+	background-color: $text
+	padding: 55px 35px
+	text-align: center
+
+	ul
+		margin-bottom: 65px
+
+	li
+		position: relative
+		padding: 20px 0 
+		&::before
+			content: ""
+			position: absolute
+			left: 50%
+			bottom: 0
+			transform: translate(-50%, 0)
+			height: 1px
+			background-color: #20384e
+			width: 60px
+		&:first-child
+			padding-top: 0
+		&:last-child
+			padding-bottom: 0
+			&::before
+				display: none
+
+		a
+			text-transform: uppercase
+			font-size: 17px
+			letter-spacing: 1px
+			line-height: 1
+			font-weight: 400
+
+	a
+		font-family: $title
+		text-decoration: none
+		color: #fff
+
+.logo
+	width: 163px
+	height: 50px
+	margin-bottom: 90px
+
+.info
+	display: flex
+	flex-direction: column
+	text-align: center
+	
+	.btn
+		margin: 0 auto 10px auto
+		width: 130px
+
+.call
+	font-size: 20px
+	font-weight: 700
+	margin-bottom: 10px
+	line-height: 1
+	letter-spacing: 0.83px
+
+.header
+	padding-top: 60px
+	padding-bottom: 105px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+	&__nav
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		margin-bottom: 130px
+
+		&_list
+			display: flex
+			flex-direction: row
+			justify-content: flex-start
+		
+		li
+			position: relative
+			padding-bottom: 15px
+			margin-right: 60px
+			&::before
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				width: 100%
+				height: 1px
+				width: 100%
+				background-color: $text
+			&:last-child
+				margin-right: 0
+
+		a
+			text-decoration: none
+			text-transform: uppercase
+			font-family: $title
+			color: $text
+			font-size: 15px
+			font-weight: 600
+			letter-spacing: 1px
+			line-height: 1
+
+		&_soc
+			position: relative
+			display: flex
+			flex-direction: row
+			&::before
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				width: 100%
+				height: 1px
+				width: 100%
+				background-color: $text
+
+			a
+				position: relative
+				color: $text
+				margin-right: 12px
+				&:last-child
+					margin-right: 0
+
+			i
+				font-size: 20px
+	
+	&__content
+		h1
+			margin-bottom: 35px
+		
+		p
+			color: #0f2a44
+			font-family: Akrobat
+			font-size: 24px
+			font-family: $title
+			margin-bottom: 10px
+
+		ul
+			display: flex
+			flex-direction: row
+			margin-bottom: 120px
+
+
+		li
+			margin-right: 50px
+			color: #0f2a44
+			font-size: 18px
+			font-family: $title
+			line-height: 1.8
+
+		&_list
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+
+		&_item
+			padding: 25px 50px 25px 36px
+			margin-bottom: 30px
+			border-radius: 2px
+			background-color: #0f2a44
+			font-family: $title
+			color: $accent
+			font-size: 22px
+			line-height: 30px
+			font-weight: 600
+			transition: all .3s
+			&:hover
+				text-decoration: none
+				color: #fff
+				background-color: $accent
+			&:focus
+				text-decoration: none
+				color: #fff
+				background-color: $accent
+			&:nth-child(n+4)
+				margin-bottom: 0
+
+	&__bottom
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+
+		&_block
+			background-color: #fff
+			width: 47%
+			border-radius: 2px
+			margin-top: -72px
+
+			.top
+				padding: 25px 36px 15px 36px
+				background-color: #0f2a44
+				font-family: $title
+				font-size: 20px
+
+			.center
+				padding: 20px 15px
+
+			p
+				color: #849ec2
+
+			ul
+				display: flex
+				flex-direction: column
+				margin-bottom: 0
+
+			li
+				position: relative
+				padding-left: 20px
+				color: #0f2a44
+				font-size: 12px
+				font-family: $fonts
+				margin-bottom: 10px
+				&::before
+					content: "\f00c"
+					position: absolute
+					left: 0
+					top: 0
+					font-weight: 900
+					font-family: $fontawesome
+					font-size: 12px
+					color: #0f2a44
+
+.dark-bg
+	background-color: #eef1f6
+
+.working
+	padding-top: 55px
+
+	&__wrap
+		background-color: #eef1f6
+		height: 370px
+
+	h2
+		margin-left: 105px
+	
+	h3
+		font-size: 48px
+		font-weight: 700
+		margin-bottom: 30px
+		color: #fff
+
+	img
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		width: 100%
+		height: 100%
+	
+	p
+		color: #fff
+		font-size: 18px
+
+	&__list
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__item
+		position: relative
+		overflow: hidden
+		width: 33.333333%
+		height: 280px
+		z-index: 1
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(0, 0, 0, .75)
+			z-index: 1
+			animation: working__item-back .3s linear 1 forwards
+		&:hover
+			&::before
+				animation: working__item .3s linear 1 forwards
+			div
+				animation: working__item .3s linear 1 forwards
+		//-------------------working-active-------------------
+		&:first-child
+			&::before
+				animation: working__item .3s linear 1 forwards
+			div
+				animation: working__item .3s linear 1 forwards
+		&:nth-child(n+4)
+			width: 50%
+			height: 340px
+			h3
+				margin-bottom: 100px
+
+		div
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: 100%
+			animation: working__item-back .3s linear 1 forwards
+			z-index: 2
+			padding: 60px 30px 80px 100px
+
+	@keyframes working__item
+		0%
+			left: -100%
+		100%
+			left: 0
+
+	@keyframes working__item-back
+		0%
+			left: 0
+		100%
+			left: -100%
+
+
+.footer
+	height: 500px
+
+
+
+
+@import "media" // Always at the end
