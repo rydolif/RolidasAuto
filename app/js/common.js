@@ -1,6 +1,6 @@
 $(function() {
 //--------------------------------slider---------------------------------------------
-var swiper = new Swiper('.team__container', {
+var team = new Swiper('.team__container', {
   slidesPerView: 3,
   spaceBetween: 140,
   pagination: {
@@ -13,16 +13,19 @@ var swiper = new Swiper('.team__container', {
   },
 });
 
-var swiper = new Swiper('.customers__container', {
+var customers = new Swiper('.customers__container', {
   slidesPerView: 3,
   spaceBetween: 140,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
   navigation: {
     nextEl: '.customers__next',
     prevEl: '.customers__prev',
+  },
+});
+
+var portfolio = new Swiper('.portfolio__container', {
+  effect: 'fade',
+  pagination: {
+    el: '.swiper-pagination',
   },
 });
 //---------------------------------img-youtube--------------------------------------------
