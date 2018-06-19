@@ -1,5 +1,51 @@
 $(function() {
+//--------------------------------slider---------------------------------------------
+var swiper = new Swiper('.team__container', {
+  slidesPerView: 3,
+  spaceBetween: 140,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.team__next',
+    prevEl: '.team__prev',
+  },
+});
 
+var swiper = new Swiper('.customers__container', {
+  slidesPerView: 3,
+  spaceBetween: 140,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.customers__next',
+    prevEl: '.customers__prev',
+  },
+});
+//---------------------------------img-youtube--------------------------------------------
+var youtube = $('.youtube');
+  $.each(youtube, function(index, el) {
+    var source = "https://img.youtube.com/vi/"+ $(el).data('embed') +"/sddefault.jpg";
+    var image = new Image();
+    image.src = source;
+    image.addEventListener( "load", function() {
+      youtube[ index ].append( image );
+    }( index ) );
+
+  $(el).on('click', function() {
+    var iframe = document.createElement( "iframe" );
+
+    iframe.setAttribute( "frameborder", "0" );
+    iframe.setAttribute( "allowfullscreen", "" );
+    iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ $(this).data('embed') +"?rel=0&showinfo=0&autoplay=1" );
+    $(this).innerHTML = "";
+    $(this).append( iframe );
+    $(this).find('.play-button').hide();
+  });
+});
 //------------------------------гамбургер-----------------------------
 $('.hamburger').click(function() {
   $(this).toggleClass('hamburger-active');
