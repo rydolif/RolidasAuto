@@ -1,37 +1,49 @@
 .hamburger
 	display: none
 	position: absolute
-	right: 15px
-	top: 55%
+	right: 20px
+	top: 60px
 	padding: 0
 	transform: translate(0, -50%)
 	border: none
 	background-color: transparent
 	transition: all .3s
+	width: 20px
 	&:focus
 		outline: none
 		opacity: .7
 	&:hover
 		outline: none
 		opacity: .7
+	
+	&__text
+		display: block
+		position: absolute
+		top: 35px
+		right: -9px
+		transform: rotate(-90deg)
+		color: $accent
+		font-size: 15px
+		font-weight: 700
+		letter-spacing: 1px
+		text-transform: uppercase
+		font-family: $title
 
 	&__box
 		position: relative
 		display: inline-block
-		width: 35px
-		height: 25px
+		width: 20px
+		height: 15px
 		top: 50%
 		perspective: 80px
-
 
 	&__item
 		position: absolute
 		right: 0
 		top: 0
-		width: 35px
+		width: 20px
 		height: 3px
-		background-color: #000
-		border-radius: 4px
+		background-color: $accent
 		transition: all .2s
 		bottom: 0
 
@@ -40,9 +52,9 @@
 			display: block
 			position: absolute
 			right: 0
-			top: -10px
-			background-color: #000
-			width: 35px
+			top: -7px
+			background-color: $accent
+			width: 20px
 			height: 3px
 			transition: transform 0s 0.1s
 
@@ -51,9 +63,9 @@
 			display: block
 			position: absolute
 			right: 0
-			bottom: -10px
-			background-color: #000
-			width: 35px
+			bottom: -7px
+			background-color: $accent
+			width: 20px
 			height: 3px
 			transition: transform 0s 0.1s
 

@@ -4,7 +4,6 @@
 
 .wrapper
 	position: relative
-	width: 100%
 	margin-left: 240px
 
 .container
@@ -25,13 +24,15 @@
 	background-color: $text
 	padding: 55px 35px
 	text-align: center
+	&::-webkit-scrollbar
+		width: 0
 
 	ul
 		margin-bottom: 65px
 
 	li
 		position: relative
-		padding: 20px 0 
+		padding: 20px 0
 		&::before
 			content: ""
 			position: absolute
@@ -94,12 +95,21 @@
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
+	
+	.logo
+		display: none
 
 	&__nav
 		display: flex
 		flex-direction: row
 		justify-content: space-between
 		margin-bottom: 130px
+
+		&_menu
+			display: none
+			
+		.hamburger
+			display: none
 
 		&_list
 			display: flex
@@ -145,6 +155,7 @@
 			position: relative
 			display: flex
 			flex-direction: row
+			align-items: center
 			&::before
 				content: ""
 				position: absolute
@@ -160,6 +171,8 @@
 				position: relative
 				color: $text
 				margin-right: 12px
+				width: 22px
+				height: 22px
 				&:hover
 					i
 						color: $accent
@@ -399,6 +412,7 @@
 			margin-bottom: 0
 
 .banner
+	margin-bottom: -125px
 	h3
 		color: #fff
 		font-size: 28px
@@ -444,7 +458,7 @@
 			padding: 35px 105px 30px 55px
 
 .guarantees
-	padding-top: 75px
+	padding-top: 200px
 
 	h2
 		margin-bottom: 35px
@@ -679,6 +693,7 @@
 		border: 2px solid #ffffff
 		opacity: 1
 		background-color: #0f2a44
+		cursor: pointer
 
 .customers
 	padding-top: 65px
@@ -780,16 +795,16 @@
 		line-height: 43px
 		margin-bottom: 0
 
-	div
-		margin-bottom: 50px
-		display: flex
-		flex-direction: column
-
 	&__info
 		padding: 43px 0
 		padding-left: 835px
 		display: flex
 		flex-direction: column
+
+		div
+			margin-bottom: 50px
+			display: flex
+			flex-direction: column
 
 .content
 	padding-top: 65px

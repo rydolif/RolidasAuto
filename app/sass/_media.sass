@@ -1,10 +1,371 @@
 
+@media only screen and (max-width : 1500px)
+	.container
+		max-width: 990px
+		&-left
+			max-width: 1095px
+
+	.portfolio
+		img
+			margin-left: -140px
+
+	.slider .swiper-button-next
+		right: 0
+	
+	.slider .swiper-button-prev
+		left: -15px
+
+	.customers__container
+		max-width: 890px
+
+	.team__container
+		max-width: 890px
+
+	.map__info
+		padding-left: 780px
+
+	.map
+		iframe
+			width: 840px
+
+@media only screen and (max-width : 1366px)
+	.nav
+		li
+			padding: 19px 0
+
+	.container-left
+		max-width: 100%
+		padding: 0
+
+	.youtube img
+		top: -20%
+
+	.about
+		&__item
+			width: 25.1%
+			&:nth-child(2)
+				width: 28%
+			&:nth-child(3)
+				width: 30%
+			&:last-child
+				width: 29%
+
+		.list
+			max-width: 905px
+			br
+				display: none
+
+	.team__container
+		margin-left: 0
+
+	.customers__container
+		margin-left: 0
+
+	.slider .swiper-button-next
+		right: 30px
+	
+	.slider .swiper-button-prev
+		left: -30px
+
+	.statistics__item
+		&:nth-child(1)
+			width: 35%
+		&:nth-child(2)
+			width: 37%
+		&:nth-child(3)
+			width: 36%
+
+	.map
+		iframe
+			width: 750px
+
+		&__info
+			padding-left: 690px
+
+	.content
+		padding-bottom: 70px
+		p
+			&:last-child
+				margin-bottom: 0
+
+	.customers__container
+		margin-left: 0
+
+	.team__container
+		margin-left: 0
+
+
+@media only screen and (max-width : 1365px)
+	.container
+		margin-left: auto
+		&-left
+			max-width: 100%
+			margin-left: 0
+
+	.portfolio
+		img
+			margin-left: -15%
+			margin-right: -18%
+
+	.map
+		iframe
+			max-width: 680px
+
+@media only screen and (max-width : 1300px)
+	.slider .swiper-button-next
+		top: 50px
+		right: 30px
+	
+	.slider .swiper-button-prev
+		top: 50px
+		left: auto
+		right: 80px
+
+	.customers__container
+		margin-left: auto
+
+	.team__container
+		margin-left: auto
+
+	.portfolio
+		h2
+			left: 40px
+
+
 @media only screen and (max-width : 1200px)
+	.guarantees__item
+		width: 49%
+
+	.portfolio
+		img
+			margin-right: -250px
+
+	.guarantees
+		.youtube
+			height: 450px
+			img
+				top: 0
+				height: 450px
+
+@media only screen and (max-width : 1200px)
+	.portfolio
+		img
+			margin-right: -350px
+
+@media only screen and (max-width : 1024px)
+	.wrapper
+		margin-left: 65px
+		overflow: hidden
+	
+	.nav
+		position: fixed
+		display: block
+		left: -235px
+		top: 0
+		transition: all .3s
+		padding-right: 100px
+		padding-top: 120px
+		width: 300px
+		z-index: 1000
+
+		.logo
+			display: none
+
+		&-active
+			width: 200px
+			left: 0
+			padding-right: 15px
+			padding-left: 20px
+
+	.hamburger
+		display: block
+		z-index: 1001
+		&-active
+			.hamburger__item
+				&::before
+					top: -10px
+				&::after
+					bottom: -10px
+			.hamburger__text
+				opacity: 0
+				transition: all .2s
 
 	.header
+		padding-top: 35px
 
+		.logo
+			display: block
+			margin-bottom: 0
+			margin-right: 75px
+
+		&__nav
+			&_list
+				align-items: center
+
+			&_soc::before
+				bottom: 5px
+
+			li
+				margin-right: 35px
+
+		&__content
+			ul
+				margin-bottom: 130px
+
+			&_item
+				padding: 25px 36px 25px 36px
+		
+		&__bottom
+			padding-bottom: 35px
+
+	.working
+		display: none
+
+	.banner__block
+		padding: 35px 40px 30px 40px
+
+	.advantages
+		padding-top: 40px
+
+	.guarantees
+		padding-top: 160px
+
+		.youtube
+			margin: 0 -15px
+
+		.list
+			margin-bottom: 45px
+
+	.about
+		padding-top: 35px
+		padding-bottom: 35px
+
+	.team
+		padding-top: 35px
+		padding-bottom: 55px
+
+	.portfolio
+		height: 480px
+		img
+			margin-right: -190px
+			height: 480px
+
+		&__content
+			padding: 45px 0 50px 50px
+
+	.customers
+		padding-top: 35px
+		padding-bottom: 50px
+	
+	.statistics
+		padding-top: 40px
+		padding-bottom: 60px
+		&__box
+			margin-bottom: 60px
+			.namber
+				font-size: 80px
+
+	.content
+		padding-top: 30px
+		padding-bottom: 40px
 
 @media only screen and (max-width : 992px)
+	.header
+		.logo
+			margin-right: 0
+			width: 120px
+			height: 35px
+
+			img
+				width: 120px
+				height: 35px
+
+		&__nav
+			margin-bottom: 80px
+			li
+				margin-right: 15px
+				padding-bottom: 5px
+
+		&__content
+			ul
+				flex-direction: column
+				margin-bottom: 30px
+
+			li
+				margin-right: 0
+
+			&_list
+
+			&_item
+				width: 48%
+				padding: 15px
+				margin-bottom: 20px
+				&:nth-child(n+4)
+					margin-bottom: 20px
+
+				br
+					display: none
+	
+	.list
+		br
+			display: none
+
+	.advantages__item
+		width: 48%
+
+	.portfolio
+		height: 100%
+
+		&__container
+
+		&__slider
+			display: flex
+			flex-direction: column
+			height: 100%
+			position: relative
+			img
+				width: 100%
+				margin: 0
+
+		&__content
+			width: 100%
+
+	.map
+		height: 300px
+
+		iframe
+			position: relative
+			max-width: 100%
+			width: 100%
+			height: 200px
+
+		&__info
+			padding: 0
+			flex-direction: row
+			justify-content: space-around
+
+	.banner
+		&__box
+			flex-wrap: wrap
+		&__block
+			width: 100%
+	
+	.statistics
+		.btn
+			height: 60px
+
+	// .customers
+	// 	.youtube
+	// 		width: 100%
+	// 		padding: 0
+
+	// 	img
+	// 		width: 100%
+	// 		height: auto
+	// 		margin-bottom: 0
+	// 		margin-top: 0
+
+
 	#thanks
 		padding: 40px
 
@@ -12,68 +373,63 @@
 		width: 320px
 		padding: 40px
 
-	.nav
-		position: fixed
-		display: block
-		width: 320px
-		height: 100%
-		flex-direction: column
-		right: -100%
-		top: 80px
-		z-index: -1
-		background: rgba(0, 0, 0, .9)
-		transition: all .3s
-
-		ul
-			display: flex
-			flex-direction: column
-			justify-content: center
-			margin-top: 40px
-			margin-left: 40px
-
-		li
-			margin: 0
-			margin-bottom: 10px
-
-		a
-			color: #fff
-			display: block
-			&::before
-				content: ''
-				width: 0
-				transform: scale(0)
-				transition: all .3s
-				position: absolute
-				bottom: 0
-				width: 80%
-				height: 1px
-				background-color: $accent
-				z-index: -1
-
-			&:hover
-				color: $accent
-				text-decoration: none
-				&::before
-					transform: scale(1)
-
-			&:focus
-				color: $accent
-				text-decoration: none
-				&::before
-					transform: scale(1)
-
-	.hamburger
-		display: block
-		z-index: 1001
-		right: 15px
-
-	.hamburger-box
-		right: 0
-
 
 
 @media only screen and (max-width : 767px)
+	.wrapper
+		margin: 0
+
+	.nav
+		display: none
+
 	.header
+		padding-top: 20px
+		position: relative
+		background-color: #fff
+		z-index: 1000
+		&-menu
+			position: fixed
+			left: 0
+			right: 0
+			
+		.logo
+			width: 136px
+			height: 42px
+			img
+				width: 136px
+				height: 42px
+
+		&__content
+			h1
+				font-size: 30px
+				font-weight: 700
+				line-height: 36px
+
+		&__nav
+			&_list
+				display: none
+			&_soc
+				display: none
+
+			&_menu
+				display: block
+				position: absolute
+				right: -100%
+				width: 100%
+				height: 100%
+				background-color: #fff
+				transition: all .3s
+
+				&-active
+					right: 0
+					padding-top: 150px
+
+			.hamburger
+				display: block
+				top: 40px
+
+
+
 
 @media only screen and (max-width : 576px)
 	.header
