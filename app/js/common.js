@@ -1,4 +1,23 @@
 $(function() {
+
+if ( $(window).width() < 767 ) {
+  $(".list h3").on('click', function(e) {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).next().slideUp(500);
+      $(".item").not($(this)).removeClass('item-active');
+    }
+    else {
+      $(this).addClass('active');
+      $(".item").addClass('item-active');
+      $(".list p").not($(this).next()).slideUp(500);
+      $(".list h3").not($(this)).removeClass('active');
+      $(this).next().slideDown(500);
+    }
+  });
+};
+
+
 //--------------------------------slider---------------------------------------------
 var team = new Swiper('.team__container', {
   slidesPerView: 3,
@@ -23,6 +42,12 @@ var team = new Swiper('.team__container', {
     776: {
       slidesPerView: 2,
       spaceBetween: 20,
+    }
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
     }
   }
 });
@@ -51,6 +76,12 @@ var customers = new Swiper('.customers__container', {
       slidesPerView: 2,
       spaceBetween: 20,
     }
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
+    }
   }
 });
 
@@ -58,6 +89,7 @@ var portfolio = new Swiper('.portfolio__container', {
   effect: 'fade',
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
 //---------------------------------img-youtube--------------------------------------------
@@ -92,7 +124,8 @@ $('.burger').click(function() {
 $('.ham').click(function() {
   $(this).toggleClass('hamburger-active');
   $('.header__nav_menu').toggleClass('header__nav_menu-active');
-  $('.header').toggleClass('header-active');
+  $('.header__nav').toggleClass('header__nav-active');
+  $('header').toggleClass('header-active');
 });
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});

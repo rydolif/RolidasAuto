@@ -107,7 +107,7 @@
 
 		&_menu
 			display: none
-			
+
 		.hamburger
 			display: none
 
@@ -135,7 +135,6 @@
 				background-color: $text
 			&:last-child
 				margin-right: 0
-
 
 			a
 				text-decoration: none
@@ -217,7 +216,7 @@
 			flex-wrap: wrap
 
 		&_item
-			padding: 25px 50px 25px 36px
+			padding: 25px 35px 25px 35px
 			margin-bottom: 30px
 			border-radius: 2px
 			background-color: #0f2a44
@@ -227,6 +226,7 @@
 			line-height: 30px
 			font-weight: 600
 			transition: all .3s
+			width: 29.9%
 			&:hover
 				text-decoration: none
 				color: #fff
@@ -237,6 +237,21 @@
 				background-color: $accent
 			&:nth-child(n+4)
 				margin-bottom: 0
+
+			&:nth-child(2)
+				width: 30.84%
+
+			&:nth-child(3)
+				width: 23.36%
+
+			&:nth-child(4)
+				width: 23.36%
+
+			&:nth-child(5)
+				width: 23.36%
+
+			&:nth-child(6)
+				width: 37.38%
 
 	&__bottom
 		display: flex
@@ -396,6 +411,7 @@
 	justify-content: space-between
 	flex-wrap: wrap
 
+
 .advantages
 	padding-top: 75px
 	padding-bottom: 58px
@@ -544,6 +560,12 @@
 		color: #0f2a44
 		font-size: 13px
 		line-height: 21px
+	
+	&__list
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: wrap
 
 	&__item
 		position: relative
@@ -670,6 +692,9 @@
 			line-height: 1.5
 			font-weight: 400
 
+		.bold
+			font-weight: 700
+
 	&__btn
 		font-family: $title
 		color: $accent
@@ -681,11 +706,13 @@
 			border: 2px solid $accent
 		&:focus
 			border: 2px solid $accent
-
 	
 	.swiper-container-horizontal>.swiper-pagination-bullets
 		bottom: 45px
 		left: 15px
+	
+	.swiper-pagination
+		bottom: 50px
 
 	.swiper-pagination-bullet
 		width: 12px
@@ -694,6 +721,7 @@
 		opacity: 1
 		background-color: #0f2a44
 		cursor: pointer
+		margin-right: 10px
 
 .customers
 	padding-top: 65px
@@ -744,7 +772,7 @@
 		
 		.namber
 			font-size: 100px
-			font-weight: 700
+			font-weight: 900
 			line-height: 1
 			margin-bottom: 17px
 
@@ -783,9 +811,10 @@
 		border: none
 	
 	p
-		font-size: 14px
+		font-size: 13px
 		line-height: 20px
 		color: #fff
+		ff
 
 	a
 		font-family: $title
@@ -812,6 +841,8 @@
 
 	h2
 		margin-bottom: 27px
+		span
+			font-weight: 900
 
 	p
 		margin-bottom: 13px
