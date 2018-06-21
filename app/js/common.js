@@ -1,15 +1,25 @@
 $(function() {
 
 if ( $(window).width() < 767 ) {
+
+  $(window).scroll(function(){
+      if($(this).scrollTop()>100){
+          $('.header__nav .btn').css('display', 'block');
+          $('.header__nav .logo img').css('display', 'none');
+      }
+      else if ($(this).scrollTop()<100){
+           $('.header__nav .btn').css('display', 'none');
+           $('.header__nav .logo img').css('display', 'block');
+      }
+  });
+
   $(".list h3").on('click', function(e) {
     if ($(this).hasClass('active')) {
       $(this).removeClass('active');
       $(this).next().slideUp(500);
-      $(".item").not($(this)).removeClass('item-active');
     }
     else {
       $(this).addClass('active');
-      $(".item").addClass('item-active');
       $(".list p").not($(this).next()).slideUp(500);
       $(".list h3").not($(this)).removeClass('active');
       $(this).next().slideDown(500);
@@ -29,27 +39,21 @@ var team = new Swiper('.team__container', {
   breakpoints: {
     1500: {
       slidesPerView: 3,
-      spaceBetween: 70
-    }
-  },
-  breakpoints: {
+      spaceBetween: 70,
+    },
     992: {
       slidesPerView: 3,
-      spaceBetween: 20
-    }
-  },
-  breakpoints: {
+      spaceBetween: 20,
+    },
     776: {
       slidesPerView: 2,
       spaceBetween: 20,
-    }
-  },
-  breakpoints: {
+    },
     576: {
       slidesPerView: 1.5,
       spaceBetween: 30,
-    }
-  }
+    },
+  },
 });
 
 var customers = new Swiper('.customers__container', {
@@ -62,26 +66,20 @@ var customers = new Swiper('.customers__container', {
   breakpoints: {
     1500: {
       slidesPerView: 3,
-      spaceBetween: 70
-    }
-  },
-  breakpoints: {
+      spaceBetween: 70,
+    },
     992: {
       slidesPerView: 3,
-      spaceBetween: 20
-    }
-  },
-  breakpoints: {
+      spaceBetween: 20,
+    },
     776: {
       slidesPerView: 2,
       spaceBetween: 20,
-    }
-  },
-  breakpoints: {
+    },
     576: {
       slidesPerView: 1.5,
       spaceBetween: 30,
-    }
+    },
   }
 });
 

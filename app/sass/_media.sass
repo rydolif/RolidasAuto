@@ -29,7 +29,6 @@
 			width: 840px
 
 @media only screen and (max-width : 1366px)
-	
 	.header__content
 		&_item
 			br
@@ -101,10 +100,10 @@
 
 	.map
 		iframe
-			width: 750px
+			width: 70%
 
 		&__info
-			padding-left: 690px
+			padding-left: 75%
 
 	.content
 		padding-bottom: 70px
@@ -182,6 +181,16 @@
 	.banner__block
 		padding: 35px 105px 30px 55px
 
+	.statistics__content
+		.btn
+			width: 210px
+			margin-right: 50px
+
+		p
+			width: 70%
+			br
+				display: none
+
 @media only screen and (max-width : 1024px)
 	.wrapper
 		margin-left: 65px
@@ -227,9 +236,6 @@
 				opacity: 0
 				transition: all .2s
 	
-	.header__content_item
-		padding-right: 30px
-
 	.header
 		padding-top: 35px
 
@@ -241,12 +247,16 @@
 		&__nav
 			&_list
 				align-items: center
-
-			&_soc::before
-				bottom: 5px
+			&_soc
+				&::before
+					bottom: 3px
 
 			li
 				margin-right: 35px
+
+				a
+					&::before
+						bottom: -10px
 
 		&__content
 			ul
@@ -254,7 +264,7 @@
 
 			&_item
 				padding: 25px 36px 25px 36px
-		
+
 		&__bottom
 			padding-bottom: 35px
 
@@ -279,6 +289,8 @@
 	.about
 		padding-top: 35px
 		padding-bottom: 35px
+		br
+			display: none
 
 	.team
 		padding-top: 35px
@@ -308,30 +320,13 @@
 	.content
 		padding-top: 30px
 		padding-bottom: 40px
+	
+	.footer
+		.header__nav_soc::before
+			bottom: -10px
+
 
 @media only screen and (max-width : 992px)
-
-	.header__content
-		&_item
-
-			&:nth-child(1)
-				width: 48%
-
-			&:nth-child(2)
-				width: 48%
-
-			&:nth-child(3)
-				width: 48%
-
-			&:nth-child(4)
-				width: 48%
-
-			&:nth-child(5)
-				width: 48%
-
-			&:nth-child(6)
-				width: 48%
-
 	.header
 		.logo
 			margin-right: 0
@@ -345,8 +340,14 @@
 		&__nav
 			margin-bottom: 80px
 			li
-				margin-right: 15px
+				margin-right: 10px
 				padding-bottom: 5px
+
+			&_soc
+				&::before
+					bottom: -7px
+				a
+					margin-right: 5px
 
 		&__content
 			ul
@@ -356,15 +357,24 @@
 			li
 				margin-right: 0
 
-			&_list
-
 			&_item
 				width: 48%
 				padding: 15px
 				margin-bottom: 20px
 				&:nth-child(n+4)
 					margin-bottom: 20px
-
+				&:nth-child(1)
+					width: 48%
+				&:nth-child(2)
+					width: 48%
+				&:nth-child(3)
+					width: 48%
+				&:nth-child(4)
+					width: 48%
+				&:nth-child(5)
+					width: 48%
+				&:nth-child(6)
+					width: 48%
 				br
 					display: none
 	
@@ -392,7 +402,7 @@
 			width: 100%
 
 	.map
-		height: 300px
+		height: 100%
 
 		iframe
 			position: relative
@@ -434,52 +444,30 @@
 		width: 320px
 		padding: 40px
 
-
 @media only screen and (max-width : 767px)
-	.statistics__content
-		p
-			width: 65%
-			margin-left: 15px
-			br
-				display: none
-
-	.container
-		padding: 0 15px
-		&-left
-			padding: 0
-
-	.list p
-		display: none
-
 	.wrapper
 		margin: 0
 
 	.nav
 		display: none
 
-	.header__content
-		&_item
-			&:nth-child(1)
-				width: 100%
-
-			&:nth-child(2)
-				width: 100%
-
-			&:nth-child(3)
-				width: 100%
-				
-			&:nth-child(4)
-				width: 100%
-
-			&:nth-child(5)
-				width: 100%
-
-			&:nth-child(6)
-				width: 100%
+	.container
+		padding: 0 15px
+		&-left
+			padding: 0
 
 	.header
-		padding-top: 110px
+		padding-top: 150px
 		padding-bottom: 20px
+
+		h1
+			font-size: 22px
+			font-weight: 400
+			line-height: 36px
+			line-height: 1.2
+			span
+				font-size: 30px
+				font-weight: 700
 
 		.logo
 			width: 136px
@@ -489,23 +477,41 @@
 				height: 42px
 
 		&__content
-			h1
-				font-size: 30px
-				font-weight: 700
-				line-height: 36px
+			ul
+				margin-bottom: 20px
 			&_item
 				width: 100%
+				padding: 14px 18px
+				line-height: 1.4
 				&:last-child
+			&_item
+				&:nth-child(1)
+					width: 100%
+				&:nth-child(2)
+					width: 100%
+				&:nth-child(3)
+					width: 100%
+				&:nth-child(4)
+					width: 100%
+				&:nth-child(5)
+					width: 100%
+				&:nth-child(6)
+					width: 100%
 					margin-bottom: 0
 
 		&__bottom
 			flex-wrap: wrap
+			padding-bottom: 20px
 
 			&_block
 				width: 100%
 				margin: 0 0 20px 0
 				&:nth-child(2)
 					margin-bottom: 0
+
+				.top
+					padding: 12px
+					font-size: 18px
 
 		&__nav
 			position: fixed
@@ -581,6 +587,12 @@
 							font-size: 16px
 							font-weight: 700
 							letter-spacing: 0.94px
+							&:hover
+								color: $text
+							&:focus
+								color: $text
+							&::before
+								display: none
 				
 				.navigation
 					padding-top: 25px
@@ -601,7 +613,9 @@
 						i
 							font-size: 20px
 							margin-right: 10px
-
+						&::before
+							display: none
+				
 				.info
 					display: flex
 					flex-direction: column
@@ -629,11 +643,31 @@
 				display: block
 				top: 40px
 
-	.advantages__item
-		width: 100%
+	.advantages
+		padding-top: 30px
+		&__item
+			width: 100%
 
-	.guarantees__item
-		width: 100%
+	.statistics__content
+		p
+			width: 65%
+			margin-left: 15px
+			br
+				display: none
+
+	.list p
+		display: none
+
+	.guarantees
+		&__item
+			width: 100%
+			&:first-child
+				padding-top: 0
+			&:last-child
+				padding-bottom: 0
+
+		.list
+			margin-bottom: 20px
 	
 	.item
 		margin-bottom: 0
@@ -649,14 +683,6 @@
 			height: 1px
 			width: 110%
 			background-color: #d0d9e5
-		&::before
-			content: "+"
-			position: absolute
-			right: 0
-			color: #bacad9
-			font-size: 40px
-			font-weight: 300
-			line-height: 26px
 		&:last-child
 			&::after
 				display: none
@@ -667,11 +693,84 @@
 			line-height: 26px
 			cursor: pointer
 			width: 100%
+			margin-bottom: 0
+			&::before
+				content: "+"
+				position: absolute
+				right: 0
+				color: #bacad9
+				font-size: 40px
+				font-weight: 300
+				line-height: 26px
 
-		&-active
+		p
+			margin-top: 10px
+
+		.active
 			transition: all .2
 			&::before
 				content: "-"
+
+	.youtube
+		.play-button
+			width: 55px
+			height: 55px
+			border: 3px solid #ffffff
+			&::before
+				border-width: 12px 0 12px 19px
+	
+	.about
+		h2
+			margin-bottom: 30px
+
+		h3
+			font-size: 18px
+			margin-bottom: 10px
+			text-transform: none
+
+	.customers
+		padding-bottom: 35px
+		h2
+			margin-bottom: 15px
+			span
+				display: none
+
+	.statistics
+		padding-top: 20px
+		padding-bottom: 30px
+
+		&__box
+			margin-bottom: 22px
+
+		p
+			span
+				font-size: 13px
+				font-weight: 400
+				font-family: $fonts
+				letter-spacing: 0
+				text-transform: none
+
+	.slider
+		.container
+			padding: 0 0 0 20px
+
+		.youtube
+			width: 200px
+			height: 140px
+
+		img
+			width: 200px
+			height: 140px
+			margin-top: 0
+		p
+			font-size: 12px
+			line-height: 20px
+
+		.name
+			font-size: 14px
+
+	.team
+		padding-top: 0
 
 	.footer
 		display: none
@@ -681,12 +780,6 @@
 	.header
 		background-position: 0 -80px
 		background-color: #eef1f6
-
-		h1
-			font-size: 22px
-			span
-				font-size: 36px
-
 		&__content
 			p
 				display: none
@@ -700,25 +793,6 @@
 	h2
 		font-size: 28px
 		margin-bottom: 20px
-
-	.slider
-		.container
-			padding: 0 0 0 20px
-
-		.youtube
-			width: 190px
-			height: 140px
-
-		img
-			width: 190px
-			height: 140px
-			margin-top: 0
-		p
-			font-size: 12px
-			line-height: 20px
-
-		.name
-			font-size: 14px
 
 	.portfolio__btn
 		width: 100%
@@ -800,12 +874,14 @@
 		.namber
 			font-size: 60px
 			font-weight: 900
+			margin-bottom: 0
 
 		&__item
 			position: relative
 			display: flex
 			flex-direction: row
 			width: 100%
+			padding: 15px 0
 			&::after
 				content: ""
 				position: absolute
@@ -820,9 +896,10 @@
 
 			p
 				width: 45%
+				font-size: 20px
+				font-weight: 600
 				&:last-child
 					width: 55%
-
 
 		&__content
 			.btn
@@ -830,9 +907,16 @@
 			p
 				width: 100%
 				margin: 0
+	
+	.map
+		&__info
+			.call
+				font-size: 24px
 
 @media only screen and (max-width : 480px)
-	.header
+	.banner img
+		width: auto
+
 		
 
 @media only screen and (max-width : 400px)
