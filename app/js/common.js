@@ -1,14 +1,32 @@
 $(function() {
 
+//--------------------------------акардіон-сторінка-inner----------------------------
+
+$(".question__list h3").on('click', function(e) {
+  if ($(this).hasClass('active')) {
+    $(this).removeClass('active');
+    $(this).next().slideUp(500);
+    $(this).parent().css( "padding-bottom", "20px" );
+  }
+  else {
+    $(this).addClass('active');
+    $(this).parent().css( "padding-bottom", "10px" );
+    $(".question__list p").not($(this).next()).slideUp(500);
+    $(".question__list h3").not($(this)).removeClass('active');
+    $(this).next().slideDown(500);
+  }
+});
+
+//--------------------------------акардіон-----------------------------
 if ( $(window).width() < 767 ) {
 
   $(window).scroll(function(){
       if($(this).scrollTop()>100){
-          $('.header__nav .btn').css('display', 'block');
+          $('.header__nav .order').css('display', 'block');
           $('.header__nav .logo img').css('display', 'none');
       }
       else if ($(this).scrollTop()<100){
-           $('.header__nav .btn').css('display', 'none');
+           $('.header__nav .order').css('display', 'none');
            $('.header__nav .logo img').css('display', 'block');
       }
   });
@@ -50,7 +68,7 @@ var team = new Swiper('.team__container', {
       spaceBetween: 20,
     },
     576: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.4,
       spaceBetween: 30,
     },
   },
@@ -77,7 +95,7 @@ var customers = new Swiper('.customers__container', {
       spaceBetween: 20,
     },
     576: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.4,
       spaceBetween: 30,
     },
   }
