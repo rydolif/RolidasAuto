@@ -1,15 +1,16 @@
 .page-inner
 	.header
-		padding-bottom: 90px
+		padding-bottom: 0
+		background-color: #fff
 		&__nav
-			margin-bottom: 20px
+			margin-bottom: 90px
 	
 	.header-section
 		padding-bottom: 90px
 
 		h1
 			margin-bottom: 25px
-			line-height: 1
+			line-height: 1.3
 
 		li
 			font-family: $title
@@ -37,6 +38,7 @@
 		&__right
 			width: 40%
 			padding-left: 70px
+			padding-top: 15px
 
 			p
 				font-family: $title
@@ -89,7 +91,7 @@
 
 		p
 			font-size: 18px
-			line-height: 33px
+			line-height: .6
 			font-family: $title
 
 		a
@@ -106,7 +108,7 @@
 		overflow: hidden
 
 		h2
-			margin-bottom: 60px
+			margin-bottom: 50px
 
 		li
 			position: relative
@@ -129,11 +131,11 @@
 			flex-direction: row
 			justify-content: space-between
 			flex-wrap: wrap
-			margin-bottom: 60px
+			margin-bottom: -60px
 
 		&__item
 			position: relative
-			width: 29%
+			width: 32%
 			margin-bottom: 45px
 			z-index: 1
 			&::after
@@ -151,11 +153,13 @@
 				margin-bottom: 0
 		
 		&__accent
-			position: relative
+			float: right
+			width: 65%
 			padding-left: 20px
 			color: $accent
 			font-size: 14px
 			line-height: 23px
+			transform: translate(0, -50px)
 			&::before
 				content: "\f05a"
 				position: absolute
@@ -170,12 +174,17 @@
 			display: flex
 			flex-direction: row
 			align-items: center
+			width: 100%
+
 			p
 				margin-left: 55px
 
+			.btn
+				width: 265px
+
 	.features
 		padding-top: 65px
-		padding-bottom: 70px
+		padding-bottom: 85px
 
 		h2
 			margin-bottom: 40px
@@ -234,7 +243,7 @@
 			margin-bottom: 20px
 
 		p
-			margin-bottom: 5px
+			margin-bottom: 10px
 			font-size: 13px
 
 		.btn
@@ -249,7 +258,7 @@
 		padding-bottom: 70px
 
 		&__item
-			width: 28%
+			width: 32%
 			margin-bottom: 50px
 			&:nth-child(n+4)
 				margin-bottom: 0
@@ -269,13 +278,14 @@
 		padding-bottom: 80px
 
 		h2
-			margin-bottom: 40px
+			margin-bottom: 30px
 
 		h3
 			margin-bottom: 0
 			padding-right: 20px
 			font-size: 20px
 			font-weight: 400
+			transition: all .3s
 			&::before
 				content: "+"
 				position: absolute
@@ -286,7 +296,7 @@
 				line-height: 26px
 
 		p
-			margin-top: 20px
+			margin-top: 10px
 			font-size: 13px
 			line-height: 21px
 
@@ -297,7 +307,7 @@
 
 		&__item
 			position: relative
-			padding: 20px 0
+			padding: 15px 0
 			&::after
 				content: ""
 				position: absolute
@@ -344,4 +354,139 @@
 				line-height: 34px
 				text-transform: none
 				padding: 0
+
+	.rating
+		overflow: hidden
+		padding-top: 75px
+		padding-bottom: 70px
+
+		h2
+			margin-bottom: 20px
+
+		i
+			color: #497199
+			font-size: 12px
+			letter-spacing: 0.4px
+			margin-right: -5px
+		
+		table
+			border-bottom: 1px solid #c9d5e1
+			margin-bottom: 20px
+
+		tr
+			&:first-child
+				border-bottom: 1px solid #c9d5e1
+				border-top: 1px solid #c9d5e1
+			&:last-child
+				margin-bottom: 20px
+
+		th
+			width: 10.8%
+			padding: 10px 0
+			color: #497199
+			font-size: 12px
+			&:last-child
+				width: 14%
+
+		td
+			padding: 5px 0
+
+			&:first-child
+				color: #0f2a44
+				font-size: 18px
+				font-weight: 700
+				font-family: $title
+				width: 14%
+
+			&:nth-child(n+2)
+				width: 10.4%
+
+			&:last-child
+				color: #0f2a44
+				font-size: 18px
+				font-weight: 700
+				font-family: $title
+				width: 20%
+
+		p
+			color: #849ec2
+			i
+				color: #849ec2
+				margin-right: 8px
+		
+		.information
+			margin-top: 20px
+		
+		&__table
+			display: none
+
+		&__row
+			position: relative
+			padding: 5px 0
+			&::after
+				content: ""
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 110%
+				height: 1px
+				background-color: #d0d9e5
+			&:first-child
+				&::before
+					content: ""
+					position: absolute
+					left: 0
+					top: 0
+					width: 110%
+					height: 1px
+					background-color: #d0d9e5
+
+		&__title
+			position: relative
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			width: 100%
+			padding-right: 35px
+			&::before
+				content: "+"
+				position: absolute
+				right: 0
+				color: #bacad9
+				font-size: 40px
+				font-weight: 300
+				line-height: 26px
+
+			p
+				color: $text
+				font-size: 18px
+				font-weight: 700
+				line-height: 36px
+
+			span
+				color: $text
+				font-size: 18px
+				font-weight: 700
+				line-height: 36px
+
+		ul
+			display: none
+		
+		li
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			padding-left: 25px
+			padding-right: 30px
+			font-size: 12px
+			line-height: 20px
+			margin-bottom: 5px
+
+		.active
+			&::before
+				content: "-"
+
+
+
+
 

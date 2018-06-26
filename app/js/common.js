@@ -1,5 +1,39 @@
 $(function() {
 
+
+//--------------------------------таблиця-сторінка-inner----------------------------
+$(".star").each(function() {
+  $color = $(this).find('i').length;
+
+  if($color == 1){
+    $(this).children().css({"color": "#d9e2ee"});
+  } else if ($color == 2) {
+    $(this).children().css({"color": "#b4c3d9"});
+  } else if ($color == 3) {
+    $(this).children().css({"color": "#849ec2"});
+  } else if ($color == 4) {
+    $(this).children().css({"color": "#497199"});
+  } else {
+    $(this).children().css({"color": "#ff3f49"});
+  };
+
+});
+
+
+//--------------------------------таблиця-сторінка-inner----------------------------
+$(".rating__title").on('click', function(e) {
+  if ($(this).hasClass('active')) {
+    $(this).removeClass('active');
+    $(this).next().slideUp(500);
+  }
+  else {
+    $(this).addClass('active');
+    $(".rating__row ul").not($(this).next()).slideUp(500);
+    $(".rating__title").not($(this)).removeClass('active');
+    $(this).next().slideDown(500);
+  }
+});
+
 //--------------------------------акардіон-сторінка-inner----------------------------
 
 $(".question__list h3").on('click', function(e) {
@@ -10,7 +44,6 @@ $(".question__list h3").on('click', function(e) {
   }
   else {
     $(this).addClass('active');
-    $(this).parent().css( "padding-bottom", "10px" );
     $(".question__list p").not($(this).next()).slideUp(500);
     $(".question__list h3").not($(this)).removeClass('active');
     $(this).next().slideDown(500);
@@ -24,10 +57,12 @@ if ( $(window).width() < 767 ) {
       if($(this).scrollTop()>100){
           $('.header__nav .order').css('display', 'block');
           $('.header__nav .logo img').css('display', 'none');
+          $('.header__nav').css({"padding-bottom":"10px","padding-top":"10px"});
       }
       else if ($(this).scrollTop()<100){
            $('.header__nav .order').css('display', 'none');
            $('.header__nav .logo img').css('display', 'block');
+          $('.header__nav').css({"padding-bottom":"20px","padding-top":"20px"});
       }
   });
 
@@ -60,10 +95,6 @@ var team = new Swiper('.team__container', {
       spaceBetween: 70,
     },
     992: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    776: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
@@ -87,10 +118,6 @@ var customers = new Swiper('.customers__container', {
       spaceBetween: 70,
     },
     992: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    776: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
