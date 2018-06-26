@@ -135,6 +135,7 @@ var portfolio = new Swiper('.portfolio__container', {
     clickable: true,
   },
 });
+
 //---------------------------------img-youtube--------------------------------------------
 var youtube = $('.youtube');
   $.each(youtube, function(index, el) {
@@ -156,6 +157,7 @@ var youtube = $('.youtube');
     $(this).find('.play-button').hide();
   });
 });
+
 //------------------------------гамбургер-----------------------------
 $('.burger').click(function() {
   $(this).toggleClass('hamburger-active');
@@ -170,6 +172,7 @@ $('.ham').click(function() {
   $('.header__nav').toggleClass('header__nav-active');
   $('header').toggleClass('header-active');
 });
+
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
 
@@ -180,7 +183,7 @@ $('.ham').click(function() {
 	   return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
 	}, "Введите Ваш телефон");
 
-  $(".order-form").validate({
+  $(".question-form").validate({
     messages: {
       name: "Введите ваше Имя",
       phone: "Введите ваш телефон",
@@ -193,34 +196,11 @@ $('.ham').click(function() {
     },
     submitHandler: function(form) {
       var t = {
-        name: jQuery(".order-form").find("input[name=name]").val(),
-        phone: jQuery(".order-form").find("input[name=phone]").val(),
-        number: jQuery(".order-form").find("input[name=number]").val(),
-        product: jQuery(".order-form").find("input[name=product]").val(),
-        subject: jQuery(".order-form").find("input[name=subject]").val()
+        name: jQuery(".question-form").find("input[name=name]").val(),
+        phone: jQuery(".question-form").find("input[name=phone]").val(),
+        subject: jQuery(".question-form").find("input[name=subject]").val()
       };
-      ajaxSend('.order-form', t);
-    }
-  });
-
-  $(".consultation-form").validate({
-    messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
-    },
-    rules: {
-      "phone": {
-        required: true,
-        phoneno: true
-      }
-    },
-    submitHandler: function(form) {
-      var t = {
-        name: jQuery(".consultation-form").find("input[name=name]").val(),
-        phone: jQuery(".consultation-form").find("input[name=phone]").val(),
-        subject: jQuery(".consultation-form").find("input[name=subject]").val()
-      };
-      ajaxSend('.consultation-form', t);
+      ajaxSend('.question-form', t);
     }
   });
 
