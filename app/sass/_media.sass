@@ -154,6 +154,25 @@
 			left: 40px
 
 @media only screen and (max-width : 1200px)
+	
+	.calculator
+		&__form
+			&_input
+				width: 48%
+				input
+					width: 100%
+				select
+					width: 100%
+
+			&_item
+				width: 32%
+				&:nth-child(3n)
+					width: 32%
+
+				select
+					width: 100%
+
+
 	.guarantees__item
 		width: 49%
 
@@ -324,6 +343,26 @@
 			bottom: -10px
 
 @media only screen and (max-width : 992px)
+
+	.calculator
+		.header-section
+			padding-bottom: 30px
+
+			h1
+				margin-bottom: 25px
+
+			.sub-title
+				font-size: 16px
+				font-weight: 400
+				line-height: 24px
+
+			&__right 
+				form 
+					div
+						margin-bottom: 0
+		&__form
+			padding: 30px
+
 	.page-inner
 		.header-section
 			&__container
@@ -349,7 +388,7 @@
 					flex-direction: row
 					justify-content: space-between
 					div
-						width: 30%
+						width: 32%
 
 					input
 						width: 100%
@@ -624,6 +663,20 @@
 		.guarantees
 			.list
 				margin-bottom: 0
+	
+	.calculator
+		&__form
+			h2
+				br
+					display: none
+
+			&_link
+				width: 100%
+
+			&_item
+				width: 48%
+				&:nth-child(3n)
+					width: 48%
 
 	.wrapper
 		margin: 0
@@ -956,6 +1009,7 @@
 		display: none
 
 @media only screen and (max-width : 576px)
+
 	.page-inner
 		.header-section
 			padding-bottom: 30px
@@ -1008,6 +1062,16 @@
 
 				.title
 					bottom: 20px
+
+	.calculator
+		.header-section
+			&__right 
+				form 
+					div
+						margin-bottom: 20px
+
+					.btn
+						width: 220px
 
 	.header
 		background-position: 0 -80px
@@ -1186,7 +1250,22 @@
 						background-color: #fff
 						width: 100%
 						margin-bottom: 15px
+	
+	.calculator
+		&__form
 
+			&_item
+				width: 100%
+				&:nth-child(3n)
+					width: 100%
+
+			&_line
+				flex-direction: column
+
+			&_input
+				width: 100%
+				margin-bottom: 20px
+				
 	.banner img
 		width: auto
 

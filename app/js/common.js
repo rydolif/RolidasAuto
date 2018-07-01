@@ -1,7 +1,7 @@
 $(function() {
 
 
-//--------------------------------таблиця-сторінка-inner----------------------------
+//--------------------------------таблиця-сторінка-inner-color---------------------------
 $(".star").each(function() {
   $color = $(this).find('i').length;
 
@@ -20,7 +20,7 @@ $(".star").each(function() {
 });
 
 
-//--------------------------------таблиця-сторінка-inner----------------------------
+//--------------------------------таблиця-сторінка-inner-акардеон---------------------------
 $(".rating__title").on('click', function(e) {
   if ($(this).hasClass('active')) {
     $(this).removeClass('active');
@@ -50,14 +50,13 @@ $(".question__list h3").on('click', function(e) {
   }
 });
 
-//--------------------------------акардіон-----------------------------
+//--------------------------------вместо-логотіпа-кнопка-----------------------------
 if ( $(window).width() < 767 ) {
 
   $(window).scroll(function(){
       if($(this).scrollTop()>100){
           $('.header__nav .order').css('display', 'block');
           $('.header__nav .logo img').css('display', 'none');
-          $('.header__nav').css({"padding-bottom":"10px","padding-top":"10px"});
       }
       else if ($(this).scrollTop()<100){
            $('.header__nav .order').css('display', 'none');
