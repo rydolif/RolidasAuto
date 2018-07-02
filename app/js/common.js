@@ -182,6 +182,27 @@ $('.ham').click(function() {
 	   return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
 	}, "Введите Ваш телефон");
 
+
+  $(".question-form").validate({
+    messages: {
+      name: "Введите ваше Имя",
+      phone: "Введите ваш телефон",
+    },
+    rules: {
+      "phone": {
+        required: true,
+        phoneno: true
+      }
+    },
+    submitHandler: function(form) {
+      var t = {
+        name: jQuery(".question-form").find("input[name=name]").val(),
+        phone: jQuery(".question-form").find("input[name=phone]").val(),
+      };
+      ajaxSend('.question-form', t);
+    }
+  });
+
   $(".calculator-form").validate({
     messages: {
       name: "Введите ваше Имя",
@@ -215,6 +236,14 @@ $('.ham').click(function() {
     }
   });
 
+
+
+  $("button").on("click", function(){
+    setTimeout(function() {
+      $('form label').hide();
+    }, 3000);
+  });
+
   function ajaxSend(formName, data) {
     jQuery.ajax({
       type: "POST",
@@ -226,6 +255,7 @@ $('.ham').click(function() {
         setTimeout(function() {
           $(formName).trigger('reset');
         }, 2000);
+
       }
     });
   }
