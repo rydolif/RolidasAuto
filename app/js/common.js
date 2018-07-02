@@ -240,7 +240,7 @@ $('.ham').click(function() {
 
   $("button").on("click", function(){
     setTimeout(function() {
-      $('form label').hide();
+      $('.form label').hide();
     }, 3000);
   });
 
