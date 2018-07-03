@@ -1,18 +1,26 @@
 .auto-fit
-	.main
 	.header
 		&-section
+			padding-bottom: 65px
 			&__left
 				p
 					font-size: 30px
 					color: #0f2a44
 					font-weight: 400
+					font-family: $title
+
+			&__right
+				.btn
+					width: 215px
 
 	.services
 		padding-top: 30px
+		padding-bottom: 70px
+
 		span
+			font-family: $title
 			font-size: 30px
-			color: $accent			
+			color: $accent
 			font-weight: 300
 			margin-bottom: 80px
 			display: block
@@ -22,31 +30,27 @@
 			line-height: normal
 			position: relative
 			margin-bottom: 25px
-			
-			// &:before
-			// 	content: '1.'
-			// 	position: absolute
-			// 	left: 0px
-			// 	top: 0
-			// 	font-size: 48px
-			// 	line-height: normal
+
 		p
 			line-height: 1.36
 			font-size: 22px
 			color: $accent
 			font-weight: 700
 			margin-bottom: 28px
+
+		b
+			font-weight: 400
+
 		.button-wrap
 			display: flex
 			flex-direction: row
 			justify-content: space-between
-			padding-bottom: 70px
 
 			.services-btn
 				background-color: #0f2a44
 				width: 280px
 				height: 82px
-				border-radus: 2px
+				border-radius: 2px
 				font-family: $title	
 				font-size: 28px
 				font-weight: 600
@@ -56,6 +60,12 @@
 				display: flex
 				align-items: center
 				justify-content: center
+				&:hover
+					background-color: $accent
+					color: #fff
+				&:focus
+					background-color: $accent
+					color: #fff
 				
 	.second-services
 		padding-top: 59px
@@ -112,12 +122,6 @@
 				font-weight: 400
 				color: #0f2a44	
 
-
-		
-			
-
-	
-
 	.five-services
 		background-image: url(../img/page-inner/map.png)
 		background-position: 50% 40%
@@ -151,9 +155,6 @@
 	
 			.three-column
 				width: 15%
-	
-
-	
 
 	.services-modal
 		padding-top: 55px
@@ -197,10 +198,10 @@
 			font-family: $fonts
 			line-height: 1.61
 			margin-bottom: 15px
-	
 
 		a
-			color: $accent		
+			color: $accent
+
 		span
 			font-size: 20px
 			font-family: $fonts
@@ -246,7 +247,7 @@
 			font-size: 14px	
 			line-height: 23px
 			font-family: $fonts
-			margin-bottom: 40px							
+			margin-bottom: 40px
 		.list-two
 			display: flex
 			flex-direction: row	
@@ -300,10 +301,12 @@
 					line-height: 30px
 					display: block	
 					margin-bottom: 15px	
+
 				li
-					padding-left: 20px	
-					font-size: 13px	
-					line-height: 20px	
+					margin-bottom: 5px
+					padding-left: 20px
+					font-size: 13px
+					line-height: 20px
 					font-family: $fonts
 					position: relative
 					&:before
@@ -328,10 +331,7 @@
 
 
 @media only screen and (max-width : 1200px)
-	.auto-fit 
-		.services 
-			h2
-				font-size: 40px
+	.auto-fit
 		.second-services
 			p
 				br
@@ -342,30 +342,14 @@
 		.five-services 
 			.list-column 
 				span
-					font-size: 19px		
+					font-size: 19px
 
 		.services-modal 
 			.services-form 
 				.question-form	
 					width: 80%	
 
-		.registration 
-			h2
-				font-size: 40px
-		.support
-			h2
-				font-size: 40px
-		.guarantees 
-			h2
-				font-size: 40px
-		.guarantees 
-			h2
-				font-size: 40px
-		.advantages
-			h2
-				font-size: 40px
-				br
-					display: none
+
 		.support 
 			p	
 				br
@@ -375,24 +359,28 @@
 				font-size: 18px					
 
 @media only screen and (max-width : 992px)
-	h1 
-		span
-			font-size: 40px
+
+	.auto-fit
+		h1 
+			span
+				font-size: 40px
+				br
+					display: none
+		h2
+			font-size: 28px
 			br
-				display: none
-	.auto-fit 
-		.services 
+					display: none
+
+		.services
 			span
 				margin-bottom: 50px
-	.auto-fit 
-		.services 
-			h2
-				font-size: 35px
-				margin-bottom: 20px
-		.second-services 
+
+	.auto-fit
+		.second-services
 			p
 				font-size: 19px
 				margin-bottom: 20px
+
 		.five-services 
 			padding-top: 70px
 			padding-bottom: 70px
@@ -403,43 +391,35 @@
 				span
 					br
 						display: none
-			.list			
+
+			.list
 				.three-column
-					width: 45%				
-		.services-modal 
-			.services-form 
-				.question-form 
+					width: 45%
+
+		.services-modal
+			.services-form
+				.question-form
 					width: auto
 					justify-content: flex-start
 
-					input		
+					input
 						width: 195px
 						font-size: 13px
-						margin-right: 10px	
-		.services 
-			span
-				margin-bottom: 30px							
+						margin-right: 10px
 
-		.support 
-			h2
-				font-size: 35px
-				margin-bottom: 35px
-		.guarantees 
-			h2
-				font-size: 31px
+		.services
+			span
 				margin-bottom: 30px
+
+		.guarantees 
 			&__item
 				width: 47%
 
-		.why 
-			h2
-				font-size: 35px
-				br
-					display: none	
+		.why
 			p
 				margin-bottom: 25px	
 			.list-two
-				flex-wrap: wrap				
+				flex-wrap: wrap
 			&__item-two
 				width: 40%
 				h3
@@ -452,47 +432,57 @@
 				.list-item-two
 					margin-top: 0
 
-
 			.second-column
-				width: 44%		
-		.advantages
-			h2
-				font-size: 35px
-				margin-bottom: 30px
+				width: 44%
+
 		.question
-			padding-bottom: 30px	
+			padding-bottom: 30px
 		.content 
 			h2
 				font-size: 35px
 				margin-bottom: 20px
 
 @media only screen and (max-width : 767px)
-	.auto-fit 
+
+	.auto-fit
+
+		.services
+			padding: 30px 0
+
+			.button-wrap
+				.services-btn
+					height: 55px
+					font-size: 20px
+
+			p
+				font-size: 19px
+
+		.support
+			padding: 30px 0
+
+		.why
+			padding: 30px 0
+			p
+				margin-bottom: 0
+
+		.services-modal
+			padding: 30px 0
+
 		.list
 			width: 100%
 			flex-direction: column
+
 		.guarantees__item
 			width: 100%
-			// margin: 0 auto
 
-@media only screen and (max-width : 676px)
-	.auto-fit 
-		.services
-			p
-				font-size: 19px 
-			.button-wrap 
-				.services-btn
-					width: 260px
-					font-size: 20px
-		.five-services 
-			padding-top: 50px
-			padding-bottom: 50px
+		.five-services
 			background-size: 60%
 			.list-column
 				width: 48%
-		.services 
+
+		.services
 			h2
-				font-size: 28px	
+				font-size: 28px
 			&-modal 
 				p		
 					font-size: 16px
@@ -503,23 +493,16 @@
 							width: 166px
 						.services-active
 							width: 185px
-		.registration 
-			h2
-				font-size: 30px
-				margin-bottom: 20px
+
+		.registration
+
 			p
 				margin-bottom: 5px
 
-		.support 
-			h2
-				font-size: 30px
-				margin-bottom: 20px
-			&__wrap-list 
-				li		
+		.support
+			&__wrap-list
+				li
 					font-size: 12px
-		.guarantees 
-			h2
-				font-size: 26px
 
 		.advantages
 			padding-bottom: 50px
@@ -536,12 +519,9 @@
 			.second-column
 				width: 100%	
 				margin-bottom: 20px	
-											
-	
-					
 
 
-@media only screen and (max-width : 576px)									
+@media only screen and (max-width : 576px)
 	.auto-fit 
 		.header-section__left 
 			p
@@ -551,40 +531,33 @@
 				font-size: 16px
 			span
 				margin-bottom: 20px
-			h2
-				font-size: 25px
+
 			.button-wrap 
 				.services-btn
 					font-size: 16px
-		.five-services 
+
+		.five-services
 			.list-column
 				width: 100%
 				text-align: center
-			.list	
+			.list
 				.three-column
-					width: 100%	
-		.second-services
-			padding-top: 50px
-			padding-bottom: 50px
-		.services-modal 
-			.services-form 
+					width: 100%
+
+		.services-modal
+			.services-form
 				.question-form
 					flex-direction: column
 					input
 						width: 100%
 						margin-bottom: 15px
 						margin-right: 0
-		.registration 
-			h2
-				font-size: 24px
+
 		.support__wrap
 			flex-direction: column
 			&-list
 				width: 100%
-		.why 
-			h2
-				font-size: 29px
-				margin-bottom: 20px
+
 		.advantages
 			&__wrap
 				flex-direction: column
@@ -592,16 +565,27 @@
 					width: 100%
 					margin-right: 0
 					margin-bottom: 15px
-		.question 
-			.question-form 
-				div
-					&:last-child
-						text-align: center	
 
 @media only screen and (max-width : 480px)
 	.auto-fit 
 		.five-services
 			background-size: 70%
+
+		.second-services .list-wrap ul li
+			width: 100%
+
+		.services
+			.button-wrap
+				flex-wrap: wrap
+				.services-btn
+					height: 55px
+					width: 100%
+					font-size: 20px
+
+		.question__form .question-form input
+			text-align: left
+			padding: 0 20px
+
 @media only screen and (max-width : 320px)	
 	.auto-fit 
 		.services 

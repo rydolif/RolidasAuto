@@ -266,7 +266,7 @@
 				align-items: center
 			&_soc
 				&::before
-					bottom: 3px
+					bottom: 5px
 
 			li
 				margin-right: 35px
@@ -361,7 +361,9 @@
 					div
 						margin-bottom: 0
 		&__form
-			padding: 30px
+			padding: 30px 0
+			&_link
+				width: 55%
 
 	.page-inner
 		.header-section
@@ -471,7 +473,7 @@
 
 			&_soc
 				&::before
-					bottom: -7px
+					bottom: -5px
 				a
 					margin-right: 5px
 
@@ -665,6 +667,13 @@
 				margin-bottom: 0
 	
 	.calculator
+		h1
+			br
+				display: none
+		.header-section .sub-title
+			br
+				display: none
+
 		&__form
 			h2
 				br
@@ -907,6 +916,7 @@
 		position: relative
 		padding-bottom: 15px
 		padding-top: 13px
+		cursor: pointer
 		&::after
 			content: ""
 			position: absolute

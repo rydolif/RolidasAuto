@@ -5,8 +5,10 @@
 				p
 					width: 84%
 
-			// &__right
-			// 	padding-bottom: 40px		
+			&__right
+				.btn
+					width: 185px
+
 		.central-text
 			padding-top: 35px
 			p
@@ -17,7 +19,6 @@
 				font-family: $fonts
 				width: 95%
 
-	
 		.why-auction
 			padding-bottom: 60px
 			.list-two
@@ -38,7 +39,8 @@
 						color: $accent
 						margin-bottom: 15px
 				.second-list
-					width: 30%		
+					width: 30%
+
 		.steps
 			padding-top: 55px
 			p
@@ -49,14 +51,14 @@
 				color: $text
 			&__list
 				padding-bottom: 60px
-				.steps__item
-					&:after
-						font-size: 200px			
+
+			&__item
+				&:after
+					font-size: 200px
 
 
-		.auction
-			padding-top: 55px
-			padding-bottom: 55px
+		.auctions
+			padding: 55px 0
 			&-list
 				display: flex
 				flex-direction: row
@@ -114,6 +116,8 @@
 				margin-bottom: 35px
 			p
 				margin-bottom: 30px
+				font-size: 14px
+
 			&__list	
 				span
 					margin-bottom: 18px
@@ -128,23 +132,135 @@
 					display: block
 					font-size: 28px
 				p
-					margin-bottom: 10px									
+					margin-bottom: 10px
 			.auction-btn-two
 				width: 290px
 				font-size: 20px
 				border-radius: 2px
 				margin-top: 50px
 
-
-@media only screen and (max-width : 767px)
+@media only screen and (max-width : 1200px)
 	.auction 
 		.main 
-			.steps__list 
-				.steps__item
-					&:after
-						font-size: 115px
-						top: 50px
+			.why-auction
+				h2
+					font-size: 40px
+					margin-bottom: 35px
+					br
+						display: none 
+				.list-two-column 
+					span
+						font-size: 18px
+						margin-bottom: 10px
+			.steps
+				h2
+					font-size: 40px
+					margin-bottom: 35px
 
+
+@media only screen and (max-width : 992px)
+	.auction
+		.header-section
+			padding-bottom: 40px
+		.main
+			.why-auction
+				.list-two
+					flex-direction: column
+					.second-list
+						width: 100%
+						margin-right: 0		
+				.list-two-column
+					width: 100%
+					margin-right: 0
+					margin-bottom: 20px
+			.steps
+				&__list
+					padding: 0
+				&__item
+					width: 43%
+
+@media only screen and (max-width : 767px)
+	.auction
+		.main
+
+			.why-auction
+				padding-bottom: 20px
+
+				h2
+					font-size: 30px
+					margin-bottom: 20px
+
+				.list-two
+					flex-direction: column
+					&-column
+						margin-bottom: 0
+
+
+			.steps
+				padding: 20px 0
+				h2
+					font-size: 30px
+					margin-bottom: 20px
+
+				p
+					margin-bottom: 20px
+					
+				&__item
+					width: 100%
+					&::after
+						top: 0
+						font-size: 115px
+
+			.auctions
+				padding: 20px 0
+
+				h2
+					font-size: 28px
+
+				&-list
+
+					.auction-btn
+						margin-top: 20px
+
+					&__wrap
+						width: 100%
+						margin-right: 0
+						margin-bottom: 20px
+
+					.left-column
+						width: 100%
+						margin-right: 0
+						margin-bottom: 20px
+
+					.right-column
+						width: 100%
+						margin-right: 0
+						margin-bottom: 20px
+
+					img
+						width: 200px
+						height: 70px
+					.image-wrapper
+						width: 200px
+						height: 65px
+					.image-wrapper-two
+						width: 130px
+						height: 65px
+					.image-wrapper-three
+						width: 290px
+						height: 84px
+		
+
+			.buy-auto
+				padding: 20px 0
+				h2
+					font-size: 28px
+
+				.auction-btn-two
+					margin-top: 0
+		.question__form .question-form input
+			text-align: left
+			padding: 0 20px
 @media only screen and (max-width : 667px)
 	.auction 
 		h2
