@@ -154,7 +154,6 @@
 			left: 40px
 
 @media only screen and (max-width : 1200px)
-	
 	.calculator
 		&__form
 			&_input
@@ -172,6 +171,15 @@
 				select
 					width: 100%
 
+	.services
+		h2
+			font-size: 35px
+			
+		.code__auto-check
+			ul
+				li
+					font-size: 20px
+					line-height: 35px
 
 	.guarantees__item
 		width: 49%
@@ -454,6 +462,32 @@
 		
 		table
 			display: none
+	
+	.services
+		h2
+			font-size: 30px
+		.cicle-delivery
+			&__wrap
+				flex-direction: column 
+				&__left
+					width: 100%
+					
+				.rwd-table
+					display: table
+					width: 100%
+					margin-bottom: 20px
+					margin-right: 0
+
+			&__right
+				width: 100%
+
+		.price-colum
+			.price-list
+				p
+					font-size: 17px
+
+				.long
+					margin-bottom: 15px
 
 	.header
 		.logo
@@ -686,6 +720,65 @@
 				width: 48%
 				&:nth-child(3n)
 					width: 48%
+	
+	.services
+		h2
+			font-size: 27px
+			margin-bottom: 15px
+
+		.header-section
+			.sub-title
+				font-size: 16px
+
+		.code__auto-check
+			ul
+				li
+					font-size: 16px
+
+		.price
+			padding: 30px 0
+			&-colum
+				.long
+					margin-bottom: 20px
+				&__left
+					width: 40%
+					.price-list
+						p
+							font-size: 15px
+
+				&__right
+					width: 55%
+					.price-list
+						p
+							font-size: 14px
+
+				.btn-active
+					width: 180px
+					text-transform: none
+
+			&-button
+				margin-top: 140px
+		
+		.diagnostic
+			padding: 30px 0
+
+			p
+				width: 100%
+				&:nth-child(n+3)
+					margin-bottom: 20px
+
+
+		.transporting
+			padding: 30px 0
+			&__list
+				margin-bottom: 0
+
+		.redelivery
+			padding: 30px 0
+
+			&-wrap
+				.redelivery-button
+					margin-top: 0
 
 	.wrapper
 		margin: 0
@@ -697,20 +790,22 @@
 		padding: 0 15px
 		&-left
 			padding: 0
+	
+	.index
+		.header__content
+			padding-top: 150px
+			padding-bottom: 20px
+
+			h1
+				font-size: 22px
+				font-weight: 400
+				line-height: 36px
+				line-height: 1.2
+				span
+					font-size: 30px
+					font-weight: 700
 
 	.header
-		padding-top: 150px
-		padding-bottom: 20px
-
-		h1
-			font-size: 22px
-			font-weight: 400
-			line-height: 36px
-			line-height: 1.2
-			span
-				font-size: 30px
-				font-weight: 700
-
 		.logo
 			width: 136px
 			height: 42px
@@ -785,10 +880,10 @@
 				transition: all .2s
 				overflow: auto
 				text-align: center
+				padding: 100px 20px 20px 20px
 
 				&-active
 					right: 0
-					padding: 100px 20px 20px 20px
 
 				.block
 					position: relative
@@ -1019,7 +1114,6 @@
 		display: none
 
 @media only screen and (max-width : 576px)
-
 	.page-inner
 		.header-section
 			padding-bottom: 30px
@@ -1073,6 +1167,54 @@
 				.title
 					bottom: 20px
 
+	.services
+		h3
+			font-size: 26px
+
+		.header-section
+			&__right
+				form
+					.btn
+						width: 220px
+
+		.redelivery-wrap
+			flex-direction: column
+			&__left
+				width: 100%
+			&__right
+				width: 100%
+
+		.transporting
+			h3
+				margin-top: 20px
+				margin-bottom: 20px
+
+			&__list
+				flex-direction: column
+
+				p
+					margin-bottom: 0
+
+			&__item
+				width: 100%
+				margin-bottom: 25px
+				&::after
+					font-size: 80px
+
+				&:nth-child(n+4)
+					margin-bottom: 35px
+
+				&:nth-child(6)
+					margin-top: 0
+
+		.cicle-delivery
+			padding: 30px 0
+			&__wrap
+				table
+					tr
+						td
+							font-size: 14px
+
 	.calculator
 		.header-section
 			&__right 
@@ -1084,9 +1226,8 @@
 						width: 220px
 
 	.header
-		background-position: 0 -80px
-		background-color: #eef1f6
 		&__content
+			background-position: 0 -80px
 			p
 				display: none
 
@@ -1275,7 +1416,28 @@
 			&_input
 				width: 100%
 				margin-bottom: 20px
-				
+	
+
+	.services
+		.price-colum
+			flex-direction: column
+			&__left
+				width: 100%
+			&__right
+				width: 100%
+
+			.btn-active
+				margin-bottom: 20px
+				margin-top: 20px
+
+
+		.cicle-delivery__wrap
+			.rwd-table
+				width: 480px
+
+		.table__wrap
+			overflow-x: auto
+
 	.banner img
 		width: auto
 
