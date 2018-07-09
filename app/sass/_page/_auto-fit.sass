@@ -74,7 +74,7 @@
 			margin-bottom: 27px
 			
 
-		p
+		.red
 			font-size: 22px
 			font-family: $title
 			font-weight: 700
@@ -82,12 +82,13 @@
 			color: $accent	
 			margin-bottom: 23px
 
-		b
+		p
 			font-size: 14px
 			line-height: 1.64
 			color: $text
+			font-weight: 400
 		.list-wrap
-			p
+			.blue
 				font-size: 20px
 				color: #849ec2
 				font-family: $title	
@@ -115,7 +116,7 @@
 						font-family: "FontAwesome", sans-serif
 						font-size: 12px
 						color: #0f2a44
-				b
+				p
 				font-size: 13px
 				line-height: 1.54
 				font-family: $fonts
@@ -131,7 +132,7 @@
 		padding-top: 120px
 		padding-bottom: 140px
 		
-		.list
+		.five-block
 			display: flex
 			flex-direction: row
 			justify-content: space-between
@@ -455,7 +456,7 @@
 					font-size: 20px
 
 			p
-				font-size: 19px
+				font-size: 17px
 
 		.support
 			padding: 30px 0
@@ -476,9 +477,16 @@
 			width: 100%
 
 		.five-services
+
 			background-size: 60%
-			.list-column
-				width: 48%
+			.five-block
+				flex-direction: column
+				.five-block-column
+					width: 100%
+					span
+						margin-bottom: 5px	
+						br
+							display: none
 
 		.services
 			h2

@@ -11,3 +11,331 @@
 
 	.code
 		padding: 55px 0 70px 0
+		p
+			margin-bottom: 15px
+			color: $accent
+			font-size: 14px
+			line-height: 23px
+
+		&__auto-check
+			ul
+				li
+					line-height: 44px
+					font-size: 22px
+					font-family: $title
+		.services-button
+			font-size: 18px
+			height: 45px
+			line-height: 23px
+			margin-top: 25px	
+
+		.prottection
+			&__wrap
+				width: 100%
+
+	.redelivery
+		padding-top: 70px
+		padding-bottom: 60px
+		&-wrap
+			padding-top: 30px
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			&__left
+				display: flex
+				flex-direction: column
+				h3
+					span
+						margin-bottom: 20px
+				p
+					margin-bottom: 30px		
+				width: 48%
+			&__right
+				width: 44%
+				display: flex
+				flex-direction: column
+				span
+						margin-bottom: 20px	
+				p
+					margin-bottom: 30px	
+			.redelivery-button
+				font-size: 18px
+				height: 45px
+				line-height: 23px
+				margin-top: 20px	
+
+	.diagnostic
+		padding-top: 60px
+		padding-bottom: 60px
+		p
+			font-size: 14px
+			width: 98%
+			margin-bottom: 15px
+		.diagnostic-button
+				font-size: 18px
+				height: 45px
+				line-height: 23px
+				margin-top: 30px	
+
+	.transporting
+		padding-top: 70px
+		padding-bottom: 70px
+		position: relative
+		overflow: hidden
+
+		h2
+			margin-bottom: 30px
+		p
+			margin-bottom: 15px
+		h3
+			font-size: 30px
+			width: 100%
+			margin-top: 35px
+			padding-bottom: 50px
+			margin-bottom: 0
+			font-weight: 400		
+
+		li
+			position: relative
+			padding-left: 20px
+			margin-bottom: 10px
+			&::before
+				content: "\f00c"
+				position: absolute
+				left: 0
+				top: 0
+				font-weight: 900
+				font-family: $fontawesome
+				font-size: 12px
+				color: #0f2a44
+			&:last-child
+				margin-bottom: 0
+
+		&__list
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+			margin-bottom: -60px
+
+		&__item
+			position: relative
+			width: 30%
+			margin-bottom: 45px
+			z-index: 1
+			&::after
+				content: attr(data-number)
+				position: absolute
+				left: 0
+				top: 0
+				z-index: -1
+				font-family: $title
+				font-size: 300px
+				font-weight: 900
+				line-height: .5
+				color: #fff
+			&:nth-child(n+4)
+				margin-bottom: 0
+			&:nth-child(6)
+				margin-top: 50px
+			&:nth-child(7)
+				margin-top: 100px		
+		
+		&__accent
+			float: right
+			width: 65%
+			padding-left: 20px
+			color: $accent
+			font-size: 14px
+			line-height: 23px
+			transform: translate(0, -50px)
+			&::before
+				content: "\f05a"
+				position: absolute
+				left: 0
+				top: 0
+				font-family: FontAwesome
+				font-weight: 700
+				font-size: 14px
+				color: $accent
+
+		&__bottom
+			display: flex
+			flex-direction: row
+			align-items: center
+			width: 100%
+
+			p
+				margin-left: 55px
+
+			.btn
+				width: 265px	
+
+	.cicle-delivery
+		padding-top: 60px
+		padding-bottom: 50px
+		h3
+			font-size: 30px
+			margin-bottom: 20px
+			font-weight: 400	
+		&__wrap
+			display: flex
+			flex-direction: row	
+				
+			table
+				width: 60%
+				tr	
+					td
+						line-height: 2.1
+						font-size: 18px
+						font-weight: 600
+						font-family: $title
+						vertical-align: top		
+			thead
+				border-bottom: 1px solid #c9d5e1
+				border-top: 1px solid #c9d5e1
+
+				th
+					padding-top: 3px
+					padding-bottom: 3px
+					color: #497199
+					font-weight: 300
+					font-size: 12px
+					&:nth-child(n+2)
+						text-align: center	
+			.column-center
+				text-align: center
+				border-bottom: 1px solid #c9d5e1	
+			.blue-text
+				color: #497199
+				font-weight: 600
+				font-size: 14px	
+				line-height: 2.5
+			.last-column
+				text-align: center	
+
+			.rwd-table
+				margin-right: 10%	
+				td
+					&:nth-child(n+3)
+						text-align: center
+			.center-text
+				text-align: center					
+				
+		&__right
+			width: 21%
+			p
+				font-size: 14px	
+				line-height: 24px					
+
+	.price
+		padding-top: 60px
+		padding-bottom: 15px
+
+		&-colum
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			&__left 
+				display: flex
+				flex-direction: column
+				width: 35%
+
+				.price-list
+					
+					display: flex
+					flex-direction: row
+					justify-content: space-between
+					p
+						font-size: 20px
+						line-height: 37px
+						font-family: $title
+					.red
+						color: $accent
+						font-family: $title	
+				.price-button
+					font-size: 18px
+					height: 45px
+					line-height: 23px
+					margin-top: 40px				
+
+			&__right
+				display: flex
+				flex-direction: column
+				width: 50%
+				.price-list
+					
+					display: flex
+					flex-direction: row
+					justify-content: space-between
+					p
+						font-size: 20px
+						line-height: 37px
+						font-family: $title
+					.red
+						color: $accent
+						font-family: $title	
+					.long
+						margin-bottom: 40px																		
+
+@media only screen and (max-width : 1200px)
+	.services
+		h2
+			font-size: 35px
+			
+		.code__auto-check
+			ul
+				li
+					font-size: 20px
+					line-height: 35px
+
+@media only screen and (max-width : 992px)
+	.services
+		h2
+			font-size: 30px
+		.cicle-delivery
+			&__wrap
+				flex-direction: column 
+				&__left
+					width: 100%
+					
+				.rwd-table
+					display: table
+					width: 100%
+					margin-bottom: 20px
+					margin-right: 0
+
+			&__right
+				width: 100%
+
+		.price-colum__right
+			.price-list
+				p	
+					font-size: 17px
+
+		.price-colum__left
+			.price-list
+				p
+					font-size: 17px
+
+@media only screen and (max-width : 576px)
+	.services 
+		h2
+			font-size: 27px
+		.price-colum__left 
+			width: 40%
+			.price-list 
+				p
+					font-size: 14px
+		.price-colum__right
+			width: 55%	
+			.price-list 
+				p
+					font-size: 14px
+		.price-button
+			margin-top: 140px
+
+
+
+
+
