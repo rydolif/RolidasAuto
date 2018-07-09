@@ -701,6 +701,15 @@
 			.list
 				margin-bottom: 0
 	
+	.spare-parts
+		&__container
+			padding: 30px 0
+
+			.calculator__form_input
+				margin-bottom: 20px
+		&__work
+			padding: 30px 0
+
 	.calculator
 		h1
 			br
@@ -1120,6 +1129,10 @@
 	.page-inner
 		.header-section
 			padding-bottom: 30px
+
+			.sub-title
+				font-size: 18px
+				
 			h1
 				font-size: 30px
 				span
@@ -1169,6 +1182,26 @@
 
 				.title
 					bottom: 20px
+		
+	.spare-parts
+		&__container
+			form
+				input
+					width: 65%
+
+		&__work
+			&_list
+				flex-wrap: wrap
+
+			&_item
+				width: 48%
+				margin-bottom: 35px
+				font-size: 16px
+				&::before
+					font-size: 70px
+				&:nth-child(n+3)
+					margin-bottom: 0
+
 
 	.services
 		h3
@@ -1405,6 +1438,17 @@
 						width: 100%
 						margin-bottom: 15px
 	
+	.spare-parts
+		&__container
+			&_line
+				flex-direction: column
+				align-items: flex-start
+			
+			form
+				input
+					width: 100%
+					margin: 0
+
 	.calculator
 		&__form
 
@@ -1419,7 +1463,6 @@
 			&_input
 				width: 100%
 				margin-bottom: 20px
-	
 
 	.services
 		.price-colum
