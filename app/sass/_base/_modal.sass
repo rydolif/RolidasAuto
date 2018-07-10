@@ -1,34 +1,26 @@
 .modal
 	position: relative
 	overflow: hidden
-	width: 830px
+	width: 680px
 	height: auto
-	padding: 50px
+	padding: 40px 50px 50px
 	background-color: #fff
 	z-index: 1
 
-	h2
-		margin-bottom: 50px
-		font-size: 36px
-		text-align: center
-		&::after
-			margin: 20px auto 40px auto
+	div
+		margin-bottom: 20px
 
-	h3
-		font-size: 30px
-		text-align: center
-		margin-bottom: 30px
-
-		span
-			font-size: 26px
-			color: #212121
-			font-weight: 300
+	input
+		width: 275px
+		height: 45px
+		line-height: 45px
+		background: #fff
+		&::placeholder
+			line-height: 45px
 
 	label.error
 		position: absolute
-		top: -20px
-		right: 0
-		left: 0
+		top: -17px
 		transition: all .3s
 		animation: error .3s linear 1 forwards
 		color: red
@@ -36,91 +28,32 @@
 		font-weight: 400
 
 
-
-	&__container
-		margin-bottom: 50px
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		p
-			font-size: 24px
-			font-family: $title
-		b
-			span
-				position: relative
-				font-size: 30px
-				font-weight: 700
-				z-index: 1
-				padding: 0 5px
-				&::after
-					content: ""
-					position: absolute
-					bottom: 0
-					left: 0
-					z-index: -1
-					width: 100%
-					height: 50%
-					background-color: #e7c0b6
-				span
-					font-size: 14px
-					text-transform: uppercase
-
 	.sub-title
-		margin-bottom: 30px
-
-	.form-group
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		align-items: center
-		div
-			position: relative
-			width: 32%
+		font-family: $title
+		font-size: 20px
+		color: $text
+		margin-bottom: 35px
 
 	.btn
-		width: 100%
-		padding: 18px 0
-		font-size: 12px
+		width: 180px
+		height: 45px
+		padding: 0
+		line-height: 45px
+		text-transform: none
+		font-size: 18px
 
 	.close
 		position: absolute
-		right: 15px
-		top: 15px
+		right: 30px
+		top: 30px
 		display: block
 		background-color: #fff
 		border: none
 		outline: none
 		cursor: pointer
-		animation: scale-back .2s ease-in forwards
-		&:hover
-			animation: scale .2s ease-in forwards
-
-#question
-	width: 400px
-	text-align: center
-	padding: 50px
-	
-	h2
-		margin-bottom: 0
-		&::after
-			margin-top: 15px
-			margin-bottom: 15px
-	p
-		margin-bottom: 30px
-		text-align: center
-
-	input
-		width: 100%
-
-	.form-group
-		width: 100%
-		margin-bottom: 20px
-		div
-			width: 100%
 
 #thanks
-	width: 400px
-	height: 420px
+	width: 320px
 	text-align: center
 	padding: 50px
 
