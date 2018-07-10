@@ -31,7 +31,8 @@
 	position: fixed
 	left: 0
 	top: 0
-	overflow: auto
+	overflow-y: inherit
+	overflow-x: auto
 	width: 240px
 	height: 100%
 	background-color: $text
@@ -40,12 +41,21 @@
 	&::-webkit-scrollbar
 		width: 0
 
-	ul
+	&__list
 		margin-bottom: 65px
 
-	li
+	&__item
 		position: relative
 		padding: 20px 0
+
+		&:hover
+			ul
+				display: block
+
+		&:focus
+			ul
+				display: block
+
 		&::before
 			content: ""
 			position: absolute
@@ -55,8 +65,10 @@
 			height: 1px
 			background-color: #20384e
 			width: 60px
+
 		&:first-child
 			padding-top: 0
+
 		&:last-child
 			padding-bottom: 0
 			&::before
@@ -72,6 +84,31 @@
 				color: $accent
 			&:focus
 				color: $accent
+		
+		ul
+			display: none
+			position: absolute
+			left: -25px
+			width: 220px
+			height: auto
+			background-color: $accent
+			padding: 15px
+			border-radius: 2px
+			z-index: 1
+
+		li
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+
+			a
+				text-transform: none
+				font-size: 16px
+				&:hover
+					color: $text
+				&:focus
+					color: $text
+
 	a
 		font-family: $title
 		text-decoration: none
@@ -881,6 +918,92 @@
 		margin-bottom: 13px
 		font-size: 14px
 		line-height: 21px
+
+
+.question
+	padding-top: 65px
+	padding-bottom: 80px
+
+	h2
+		margin-bottom: 30px
+
+	h3
+		cursor: pointer
+		margin-bottom: 0
+		padding-right: 20px
+		font-size: 20px
+		font-weight: 400
+		transition: all .3s
+		&::before
+			content: "+"
+			position: absolute
+			right: 0
+			color: #bacad9
+			font-size: 40px
+			font-weight: 300
+			line-height: 26px
+
+	p
+		margin-top: 10px
+		font-size: 13px
+		line-height: 21px
+
+	&__list
+		margin-bottom: 30px
+		p
+			display: none
+
+	&__item
+		position: relative
+		padding: 15px 0
+		&::after
+			content: ""
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #c9d5e1
+		&:first-child
+			padding-top: 0
+
+	.active
+		transition: all .2
+		&::before
+			content: "-"
+
+	&__form
+		h3
+			color: $text
+			margin-bottom: 25px
+			padding: 0
+			&::before
+				display: none
+	
+	.question-form
+		display: flex
+		flex-direction: row
+		margin-bottom: 0
+
+		div
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+
+		input
+			height: 45px
+			width: 215px
+
+		.btn
+			height: 45px
+			width: 180px
+			font-size: 18px
+			font-weight: 700
+			line-height: 34px
+			text-transform: none
+			padding: 0
+
 
 .footer
 	padding-bottom: 45px

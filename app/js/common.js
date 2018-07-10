@@ -12,11 +12,28 @@ $("#add-detail").on('click', function() {
 
 
 //-------------------------скорость якоря---------------------------------------
-$("body").on("click","a", function (event) {
+$(".header__nav_list").on("click","a", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
         top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top - 90}, 'slow', 'swing');
+    $('body,html').animate({scrollTop: top - 100}, 'slow', 'swing');
+});
+
+$(".spare-parts__container").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top - 100}, 'slow', 'swing');
+});
+
+$(".navigation ul").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top - 100}, 'slow', 'swing');
+
+    $('.header__nav_menu-active').removeClass('header__nav_menu-active');
+    $('.ham').removeClass('hamburger-active');
 });
 
 //--------------------------------таблиця-сторінка-inner-color---------------------------
@@ -242,12 +259,12 @@ $('.ham').click(function() {
         year: jQuery(".calculator-form").find("select[name=year]").val(),
         bodywork: jQuery(".calculator-form").find("select[name=bodywork]").val(),
         engine: jQuery(".calculator-form").find("select[name=engine]").val(),
-        kw: jQuery(".calculator-form").find("select[name=kw]").val(),
+        kw: jQuery(".calculator-form").find("input[name=kw]").val(),
         transmission: jQuery(".calculator-form").find("select[name=transmission]").val(),
-        amount: jQuery(".calculator-form").find("select[name=amount]").val(),
-        mileage: jQuery(".calculator-form").find("select[name=mileage]").val(),
+        amount: jQuery(".calculator-form").find("input[name=amount]").val(),
+        mileage: jQuery(".calculator-form").find("input[name=mileage]").val(),
         country: jQuery(".calculator-form").find("select[name=country]").val(),
-        vin: jQuery(".calculator-form").find("select[name=vin]").val(),
+        vin: jQuery(".calculator-form").find("input[name=vin]").val(),
         subject: jQuery(".calculator-form").find("input[name=subject]").val()
       };
       ajaxSend('.calculator-form', t);
@@ -269,6 +286,14 @@ $('.ham').click(function() {
       var t = {
         name: jQuery(".spare-parts-form").find("input[name=name]").val(),
         phone: jQuery(".spare-parts-form").find("input[name=phone]").val(),
+        link: jQuery(".spare-parts-form").find("input[name=link]").val(),
+        type: jQuery(".spare-parts-form").find("select[name=type]").val(),
+        details: jQuery(".spare-parts-form").find("select[name=details]").val(),
+        mark: jQuery(".spare-parts-form").find("select[name=mark]").val(),
+        model: jQuery(".spare-parts-form").find("select[name=model]").val(),
+        year: jQuery(".spare-parts-form").find("select[name=year]").val(),
+        body: jQuery(".spare-parts-form").find("select[name=body]").val(),
+        fuel: jQuery(".spare-parts-form").find("select[name=fuel]").val(),
         dynamic: jQuery(".spare-parts-form").find("input[name=dynamic[]]").val(),
       };
       ajaxSend('.spare-parts-form', t);

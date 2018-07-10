@@ -20,6 +20,14 @@
 		$country = isset($_POST['country']) ? htmlspecialchars(trim($_POST['country'])) : '';
 		$vin = isset($_POST['vin']) ? htmlspecialchars(trim($_POST['vin'])) : '';
 
+		$details = isset($_POST['details']) ? htmlspecialchars(trim($_POST['details'])) : '';
+		$mark = isset($_POST['mark']) ? htmlspecialchars(trim($_POST['mark'])) : '';
+		$model = isset($_POST['model']) ? htmlspecialchars(trim($_POST['model'])) : '';
+		$body = isset($_POST['body']) ? htmlspecialchars(trim($_POST['body'])) : '';
+		$fuel = isset($_POST['fuel']) ? htmlspecialchars(trim($_POST['fuel'])) : '';
+		$dynamic = isset($_POST['dynamic[]']) ? htmlspecialchars(trim($_POST['dynamic[]'])) : '';
+
+
 		$to = 'rudolifrudolif@gmail.com';
 
 		$headers = "From: $SITE_TITLE \r\n";
@@ -30,6 +38,32 @@
 		$data .= 'Имя: '.$name."<br>";
 		$data .= 'Телефон: '.$phone."<br>";
 
+
+		foreach($arr as $data) {
+			if ($dynamic) {
+				$data .= 'Добавленые поля: ' . $dynamic ."<br>";
+			}
+		}
+
+		if ( $fuel) {
+			$data .= 'Тип топлива: ' . $fuel ."<br>";
+		}
+		
+		if ( $body) {
+			$data .= 'Тип кузова: ' . $body ."<br>";
+		}
+
+		if ( $model) {
+			$data .= 'Модель: ' . $model ."<br>";
+		}
+
+		if ( $mark) {
+			$data .= 'Марка: ' . $mark ."<br>";
+		}
+		
+		if ( $details) {
+			$data .= 'Тип деталей: ' . $details ."<br>";
+		}
 
 		if ( $link) {
 			$data .= 'Ссылка: ' . $link ."<br>";
