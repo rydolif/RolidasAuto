@@ -75,11 +75,10 @@ $(".question__list h3").on('click', function(e) {
   if ($(this).hasClass('active')) {
     $(this).removeClass('active');
     $(this).next().slideUp(500);
-    $(this).parent().css( "padding-bottom", "20px" );
   }
   else {
     $(this).addClass('active');
-    $(".question__list p").not($(this).next()).slideUp(500);
+    $(".question__item div").not($(this).next()).slideUp(500);
     $(".question__list h3").not($(this)).removeClass('active');
     $(this).next().slideDown(500);
   }
@@ -217,6 +216,25 @@ $('.ham').click(function() {
 	   return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
 	}, "Введите Ваш телефон");
 
+  $(".portfolio-form").validate({
+    messages: {
+      name: "Введите ваше Имя",
+      phone: "Введите ваш телефон",
+    },
+    rules: {
+      "phone": {
+        required: true,
+        phoneno: true
+      }
+    },
+    submitHandler: function(form) {
+      var t = {
+        phone: jQuery(".portfolio-form").find("input[name=phone]").val(),
+        subject: jQuery(".portfolio-form").find("input[name=subject]").val(),
+      };
+      ajaxSend('.portfolio-form', t);
+    }
+  });
 
   $(".contact-form").validate({
     messages: {

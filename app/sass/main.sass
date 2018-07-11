@@ -4,9 +4,11 @@
 
 .index
 	.header
-		position: absolute
+		position: fixed
 		right: 0
-		left: 0
+		left: 240px
+		z-index: 1000
+		background: rgba(255, 255, 255, .95)
 
 		&__content
 			padding-top: 220px
@@ -31,8 +33,7 @@
 	position: fixed
 	left: 0
 	top: 0
-	overflow-y: inherit
-	overflow-x: auto
+	z-index: 2000
 	width: 240px
 	height: 100%
 	background-color: $text
@@ -88,13 +89,21 @@
 		ul
 			display: none
 			position: absolute
-			left: -25px
+			top: 0
+			left: 180px
 			width: 220px
 			height: auto
 			background-color: $accent
 			padding: 15px
 			border-radius: 2px
-			z-index: 1
+			z-index: 500
+			&::before
+				content: ''
+				position: absolute
+				left: -25px
+				top: 10px
+				border: 15px solid transparent
+				border-right: 15px solid $accent
 
 		li
 			margin-bottom: 10px
@@ -141,8 +150,21 @@
 
 .header
 	padding-top: 60px
-	padding-bottom: 105px
-	
+	padding-bottom: 30px
+	position: fixed
+	right: 0
+	left: 240px
+	z-index: 1000
+	background: rgba(255, 255, 255, .95)
+	transition: all .3s
+
+	&-active
+		position: fixed
+		right: 0
+		left: 240px
+		z-index: 1000
+		padding: 25px 0
+
 	.logo
 		display: none
 
@@ -150,7 +172,6 @@
 		display: flex
 		flex-direction: row
 		justify-content: space-between
-		margin-bottom: 130px
 		transition: all .3s
 		
 		.logo
@@ -483,6 +504,7 @@
 
 .banner
 	margin-bottom: -125px
+
 	h3
 		color: #fff
 		font-size: 28px
@@ -495,13 +517,13 @@
 
 	li
 		color: #fff
-		font-size: 28px
 		line-height: 40px
 		font-weight: 700
 		margin-bottom: 0
 		font-family: $title
 	
 	a
+		font-size: 30px
 		color: #fff
 		&:hover
 			color: #fff
@@ -532,6 +554,14 @@
 		height: 225px
 		z-index: 1
 		padding: 35px 105px 30px 105px
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background: rgba(0, 0, 0, .6)
 
 		&:last-child
 			padding: 35px 105px 30px 55px
@@ -702,13 +732,14 @@
 		left: 105px
 		top: 52px
 		z-index: 2
+		color: #fff
 	
 	h3
 		font-size: 28px
 		font-weight: 700
 		margin-bottom: 25px
 
-	img
+	.youtube
 		width: 890px
 		height: 510px
 
@@ -738,14 +769,22 @@
 		width: 350px
 		padding: 70px 0 50px 50px
 	
-	&__price
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		margin-bottom: 35px
+		p
+			color: #849ec2
+			font-size: 13px
+			line-height: 1.46
+
+		&__price
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			margin-bottom: 35px
 
 		div
-			width: 49%
+			display: flex
+			flex-direction: row
+			align-items: center
+			width: 100%
 			color: #fff
 			font-size: 13px
 			&:first-child
@@ -756,22 +795,33 @@
 			font-size: 40px
 			line-height: 1.5
 			font-weight: 400
+			width: 48%
 
 		.bold
 			font-weight: 700
 
 	&__btn
 		font-family: $title
-		color: $accent
 		border: 2px solid $accent
+		text-transform: none
+		width: 185px
+		height: 40px
+		padding: 0
 		font-size: 18px
-		width: 250px
-		padding: 13px
 		&:hover
 			border: 2px solid $accent
 		&:focus
 			border: 2px solid $accent
 	
+	&-form
+		margin-top: 20px
+
+		input
+			background: transparent
+			margin-bottom: 10px
+			width: 230px
+			height: 40px
+
 	.swiper-container-horizontal>.swiper-pagination-bullets
 		bottom: 45px
 		left: 15px
@@ -790,7 +840,7 @@
 
 	.swiper-pagination-bullet-active
 		background-color: #fff
-		
+
 .customers
 	padding-top: 65px
 	padding-bottom: 95px
@@ -919,7 +969,6 @@
 		font-size: 14px
 		line-height: 21px
 
-
 .question
 	padding-top: 65px
 	padding-bottom: 80px
@@ -950,8 +999,6 @@
 
 	&__list
 		margin-bottom: 30px
-		p
-			display: none
 
 	&__item
 		position: relative
@@ -967,7 +1014,10 @@
 			background-color: #c9d5e1
 		&:first-child
 			padding-top: 0
-
+		
+		div
+			display: none
+			
 	.active
 		transition: all .2
 		&::before
@@ -1003,7 +1053,6 @@
 			line-height: 34px
 			text-transform: none
 			padding: 0
-
 
 .footer
 	padding-bottom: 45px
