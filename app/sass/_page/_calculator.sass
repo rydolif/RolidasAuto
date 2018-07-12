@@ -1,8 +1,20 @@
 .calculator
+	.header
+		display: none
+
+	.footer
+		display: none
+
 	.header-section
+		padding-top: 60px
 		h1
 			line-height: 1.19
 			margin-bottom: 50px
+
+		&__left
+			width: 100%
+			&::after
+				display: none
 
 		.sub-title
 			font-family: $title

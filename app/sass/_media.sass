@@ -187,6 +187,7 @@
 		.why__item-two 
 			span
 				font-size: 18px
+	
 	.auction
 		.main
 			.why-auction
@@ -232,6 +233,15 @@
 				select
 					width: 100%
 
+			&_link
+				flex-direction: column
+
+				input
+					margin-bottom: 15px
+
+				.btn
+					width: 260px
+
 	.services
 		h2
 			font-size: 35px
@@ -274,6 +284,17 @@
 
 @media only screen and (max-width : 1024px)
 	.page-inner
+		.header
+			padding-top: 35px
+			left: 65px
+
+			&-active
+				left: 65px
+				z-index: 2000
+
+			&__nav
+				margin-bottom: 0
+
 		.guarantees
 			padding-top: 30px
 			padding-bottom: 30px
@@ -308,6 +329,7 @@
 			left: 0
 			padding-right: 15px
 			padding-left: 20px
+			z-index: 3000
 
 	.hamburger
 		display: block
@@ -322,8 +344,15 @@
 				opacity: 0
 				transition: all .2s
 	
+	.index
+		.header
+			left: 65px
 	.header
 		padding-top: 35px
+
+		&-active
+			left: 65px
+			z-index: 3000
 
 		.logo
 			display: block
@@ -414,6 +443,7 @@
 @media only screen and (max-width : 992px)
 	.page-inner
 		.header-section
+			padding-top: 150px
 			&__container
 				flex-direction: column
 
@@ -584,7 +614,6 @@
 				margin-bottom: 20px
 
 	.auction
-
 		.main
 			.header-section
 				padding-bottom: 40px
@@ -619,6 +648,14 @@
 				margin-right: 5%
 
 	.calculator
+		.header
+			display: block
+			&-active
+				padding: 20px 0
+
+			&__nav_list
+				display: none
+
 		.header-section
 			padding-bottom: 30px
 
@@ -640,8 +677,16 @@
 				width: 55%
 
 	.services
+		.header
+			display: block
+			&-active
+				padding: 20px 0
+			&__nav_list
+				display: none
+
 		h2
 			font-size: 30px
+
 		.cicle-delivery
 			&__wrap
 				flex-direction: column 
@@ -665,6 +710,10 @@
 				.long
 					margin-bottom: 15px
 
+		.table__wrap
+			overflow-x: auto
+			width: 100%
+
 	.header
 		.logo
 			margin-right: 0
@@ -676,7 +725,6 @@
 				height: 35px
 
 		&__nav
-			margin-bottom: 80px
 			li
 				margin-right: 10px
 				padding-bottom: 5px
@@ -768,8 +816,8 @@
 			font-size: 28px
 
 		.swiper-pagination
-			right: 0
-			left: 0
+			right: 15px
+			left: 15px
 			bottom: 20px
 
 		&__content
@@ -777,10 +825,25 @@
 
 	#thanks
 		padding: 40px
+		.close
+			right: 30px
+			top: 30px
 
 	.modal
 		width: 320px
-		padding: 40px
+		padding: 30px
+
+		.sub-title
+			font-size: 16px
+			br
+				display: none
+
+		.close
+			right: 15px
+			top: 15px
+
+		input
+			width: 100%
 
 @media only screen and (max-width : 767px)
 	.page-inner
@@ -875,7 +938,6 @@
 		.guarantees
 			.list
 				margin-bottom: 0
-	
 
 	.auto-fit
 		.services
@@ -1060,7 +1122,6 @@
 						&:last-child
 							width: 23%
 
-
 	.spare-parts
 		&__container
 			padding: 30px 0
@@ -1071,6 +1132,10 @@
 			padding: 30px 0
 
 	.calculator
+		.header__nav_menu
+			.navigation
+				display: none
+
 		h1
 			br
 				display: none
@@ -1176,7 +1241,6 @@
 					font-weight: 700
 
 	.header
-		padding-top: 150px
 		padding-bottom: 20px
 		.logo
 			width: 136px
@@ -1648,7 +1712,6 @@
 				&:nth-child(n+3)
 					margin-bottom: 0
 
-
 	.services
 		h3
 			font-size: 26px
@@ -1706,6 +1769,10 @@
 
 					.btn
 						width: 220px
+		&__form
+			&_link
+				input
+					width: 100%
 
 	.header
 		&__content
@@ -1943,11 +2010,12 @@
 
 
 		.cicle-delivery__wrap
+			overflow: scroll
 			.rwd-table
-				width: 480px
+				width: 100%
 
 		.table__wrap
-			overflow-x: auto
+			min-width: 460px
 
 	.banner img
 		width: auto

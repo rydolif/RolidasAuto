@@ -28,7 +28,7 @@
 		$dynamic = isset($_POST['dynamic[]']) ? htmlspecialchars(trim($_POST['dynamic[]'])) : '';
 
 
-		$to = 'rudolifrudolif@gmail.com';
+		$to = 'rolidas.auto@gmail.com';
 
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
