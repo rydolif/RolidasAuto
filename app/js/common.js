@@ -26,7 +26,7 @@ $(".spare-parts__container").on("click","a", function (event) {
     $('body,html').animate({scrollTop: top - 100}, 'slow', 'swing');
 });
 
-$(".navigation ul").on("click","a", function (event) {
+$(".navigation div").on("click","a", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
         top = $(id).offset().top;

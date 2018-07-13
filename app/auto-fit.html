@@ -155,10 +155,10 @@
 						</div>
 						<div class="navigation">
 							<ul>
-							<li><a href="#guarantees">ГАРАНТИИ</a></li>
-							<li><a href="#portfolio">ПОРТФОЛИО</a></li>
-							<li><a href="#customers">Отзывы</a></li>
-							<li><a href="#contacts">КОНТАКТЫ</a></li>
+							<li><div><a href="#guarantees">ГАРАНТИИ</a></div></li>
+							<li><div><a href="#portfolio">ПОРТФОЛИО</a></div></li>
+							<li><div><a href="#customers">Отзывы</a></div></li>
+							<li><div><a href="#contacts">КОНТАКТЫ</a></div></li>
 								<li>
 									<a href="https://www.facebook.com/rolidas.auto/?hc_ref=ARTQqFVPhkD7y9znqNpx3bBW24f4LMU9mvfVUcQMcoeR6UyhFNJMxxe_eVgHvJ7pgSk&fref=nf" target="_blank"><i class="fab fa-facebook"></i></a>
 									<a href="https://www.instagram.com/rolidas_auto/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -463,18 +463,18 @@
 					<div class="swiper-wrapper">
 
 						<div class="portfolio__slider swiper-slide">
-							<img src="img/index-portfolio/portfolio.jpg" alt="">
+							<img src="img/index-portfolio/AudiA6.png" alt="">
 							<div class="portfolio__content">
-								<h3>Fiat Bravo</h3>
+								<h3>Audi A6</h3>
 								<ul>
-									<li>2008 год</li>
-									<li>50 тыс. км</li>
-									<li>Механика</li>
-									<li>Бензин</li>
+									<li>2011 год</li>
+									<li>170 000 км</li>
+									<li>Автомат</li>
+									<li>Дизель TDI 2.0</li>
 								</ul>
 								<div class="portfolio__price">
 									<div>
-										<p class="price">$ 3’000</p>
+										<p class="price">$ 9000 </p>
 										<p>Цена авто<br> в Европе</p>
 									</div>
 								</div>
@@ -494,18 +494,18 @@
 						</div>
 
 						<div class="portfolio__slider swiper-slide">
-							<img src="img/index-portfolio/portfolio.jpg" alt="">
+							<img src="img/index-portfolio/CitroenC4.png" alt="">
 							<div class="portfolio__content">
-								<h3>Fiat Bravo</h3>
+								<h3>Citroen C4</h3>
 								<ul>
-									<li>2008 год</li>
-									<li>50 тыс. км</li>
-									<li>Механика</li>
-									<li>Бензин</li>
+									<li>2015 год</li>
+									<li>136 329 км</li>
+									<li>Механіка</li>
+									<li>Дизель TDI 1.6</li>
 								</ul>
 								<div class="portfolio__price">
 									<div>
-										<p class="price">$ 4’000</p>
+										<p class="price">$ 4600 </p>
 										<p>Цена авто<br> в Европе</p>
 									</div>
 								</div>
@@ -525,18 +525,49 @@
 						</div>
 
 						<div class="portfolio__slider swiper-slide">
-							<img src="img/index-portfolio/portfolio.jpg" alt="">
+							<img src="img/index-portfolio/RenaultGrandscenic.png" alt="">
 							<div class="portfolio__content">
-								<h3>Fiat Bravo</h3>
+								<h3>Renault Grand scenic</h3>
 								<ul>
-									<li>2008 год</li>
-									<li>50 тыс. км</li>
-									<li>Механика</li>
-									<li>Бензин</li>
+									<li>2013 год</li>
+									<li>167 000 км</li>
+									<li>Автомат</li>
+									<li>DCi 1.5</li>
 								</ul>
 								<div class="portfolio__price">
 									<div>
-										<p class="price">$ 5’000</p>
+										<p class="price">$ 5600 </p>
+										<p>Цена авто<br> в Европе</p>
+									</div>
+								</div>
+								<p>Чтобы узнать подробности о стоимости пригона и растаможки такого, или другого автомобиля — заполните форму ниже</p>
+
+								<form action="sendmail.php" class="portfolio-form form" method="post">
+
+									<input type="hidden" name="subject" value="Узнать стоимость">
+
+									<div><input type="tel" name="phone" class="form__field" required placeholder="Введите свой номер телефона" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+									
+									<div><button type="submit" class="btn btn-active portfolio__btn" name="submit" value="отправить">Узнать стоимость</button></div>
+								</form>
+								<div class="swiper-pagination swiper-pagination-white"></div>
+
+							</div>
+						</div>
+
+						<div class="portfolio__slider swiper-slide">
+							<img src="img/index-portfolio/VWGolf6.png" alt="">
+							<div class="portfolio__content">
+								<h3>Renault Grand scenic</h3>
+								<ul>
+									<li>2014 год</li>
+									<li>167 000 км</li>
+									<li>Механіка</li>
+									<li>TDI 2.0</li>
+								</ul>
+								<div class="portfolio__price">
+									<div>
+										<p class="price">$ 6400</p>
 										<p>Цена авто<br> в Европе</p>
 									</div>
 								</div>
@@ -559,6 +590,7 @@
 				</div>
 			</section>
 
+
 			<section id="customers" class="customers slider">
 				<div class="container">
 					
@@ -566,33 +598,49 @@
 
 					<div class="customers__container swiper-container">
 						<div class="swiper-wrapper">
+
 							<div class="swiper-slide">
-								<div class="youtube" data-embed="WZSyzHTD88A">
-									<div class="play-button"></div>
+								<div class="customers__img customers__modal-1_open">
+									<div class="youtube" data-embed="WZSyzHTD88A">
+										<div class="play-button"></div>
+									</div>
+									<a href="#" class="customers__link customers__modal-1_open"></a>
 								</div>
 								<p class="name">Дмитрий</p>
-								<a href="https://www.youtube.com/watch?v=WZSyzHTD88A&t=8s">Skoda Fabia, 1.2 бензин, 2011 г.</a>
+								<p>Skoda Fabia, 1.2 бензин, 2011 г.</p>
 							</div>
+
 							<div class="swiper-slide">
-								<div class="youtube" data-embed="WzJ3cMrD6Z0">
-									<div class="play-button"></div>
+								<div class="customers__img customers__modal-2_open">
+									<div class="youtube" data-embed="WzJ3cMrD6Z0">
+										<div class="play-button"></div>
+									</div>
+									<a href="#" class="customers__link customers__modal-2_open"></a>
 								</div>
 								<p class="name">Лариса</p>
-								<a href="https://www.youtube.com/watch?v=WzJ3cMrD6Z0&t=47s">Citroën C3,  2011 г</a>
+								<p>Citroën C3,  2011 г</p>
 							</div>
+
 							<div class="swiper-slide">
-								<div class="youtube" data-embed="mdh0jFEJbgo">
-									<div class="play-button"></div>
+								<div class="customers__img customers__modal-3_open">
+									<div class="youtube" data-embed="mdh0jFEJbgo">
+										<div class="play-button"></div>
+									</div>
+									<a href="#" class="customers__link customers__modal-3_open"></a>
 								</div>
 								<p class="name">Юрий Журавель</p>
-								<a href="https://www.youtube.com/watch?v=mdh0jFEJbgo">Jeep Wrangler, 2011 г</a>
+								<p>Jeep Wrangler, 2011 г</p>
 							</div>
+
 							<div class="swiper-slide">
-								<div class="youtube" data-embed="XqE0Zx2Tbk0">
-									<div class="play-button"></div>
+								<div class="customers__img customers__modal-4_open">
+									<div class="youtube" data-embed="XqE0Zx2Tbk0">
+										<div class="play-button"></div>
+									</div>
+									<a href="#" class="customers__link customers__modal-4_open"></a>
 								</div>
 								<p class="name">Иванна</p>
-								<a href="https://www.youtube.com/watch?v=XqE0Zx2Tbk0">Volkswagen golf 6,  1.4 бензин, 2012 г. </a>
+								<p>Volkswagen golf 6,  1.4 бензин, 2012 г. </p>
 							</div>
 						</div>
 					</div>
@@ -664,7 +712,7 @@
 				</div>
 			</div>
 
-			<section class="content">
+<!-- 			<section class="content">
 				<div class="container">
 					<h2>Подбор и доставка авто на евро регистрации</h2>
 					<p>	Вопрос трудоустройства в нашей стране очень болезненный для соискателей. Предложений немало, но найти работу с приемлемыми условиями и достойной оплатой труда – задача чрезвычайно сложная. Выходом из ситуации для многих становится работа в Европе.</p>
@@ -673,9 +721,8 @@
 					<p>Работа в Европе для украинцев предлагается самая различная. Подходящие для себя варианты могут подобрать как квалифицированные специалисты, так и люди без какого-либо опыта работы.</p>
 					<p>Если говорить о том, какие вакансии за границей наиболее популярны, то, в первую очередь, стоит сказать о разнорабочих. Неквалифицированный труд – это практически всегда физическая работа. В Украине зарплата разнорабочих редко бывает достаточной для работника, в то же время такая работа в Европе оценивается значительно выше и, если вы себя хорошо проявит, то может рассчитывать на достойную оплату своей деятельности.</p>
 				</div>
-
 			</section>
-
+ -->
 		</main>
 
 		<footer class="footer">
@@ -702,6 +749,57 @@
 	<!-- wrapper end -->
 
 	<!-- modal -->
+	<div class="modal customers__modal" id="customers__modal-4">
+		<button class="customers__modal-4_close close">
+			<img src="img/icon/close.svg" alt="close" width="25" height="25">
+		</button>
+			
+		<div>
+			<h3>Иванна</h3>
+			<a href="https://www.youtube.com/watch?v=XqE0Zx2Tbk0">Volkswagen golf 6,  1.4 бензин, 2012 г. </a>
+		</div>
+
+		<iframe src="https://www.youtube.com/embed/XqE0Zx2Tbk0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<div class="modal customers__modal" id="customers__modal-3">
+		<button class="customers__modal-3_close close">
+			<img src="img/icon/close.svg" alt="close" width="25" height="25">
+		</button>
+			
+		<div>
+			<h3>Юрий Журавель</h3>
+			<a href="https://www.youtube.com/watch?v=WzJ3cMrD6Z0&t=47s">Jeep Wrangler, 2011 г</a>
+		</div>
+
+		<iframe src="https://www.youtube.com/embed/mdh0jFEJbgo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<div class="modal customers__modal" id="customers__modal-2">
+		<button class="customers__modal-2_close close">
+			<img src="img/icon/close.svg" alt="close" width="25" height="25">
+		</button>
+			
+		<div>
+			<h3>Лариса</h3>
+			<a href="https://www.youtube.com/watch?v=WzJ3cMrD6Z0&t=47s">Citroën C3,  2011 г</a>
+		</div>
+
+		<iframe src="https://www.youtube.com/embed/WzJ3cMrD6Z0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<div class="modal customers__modal" id="customers__modal-1">
+		<button class="customers__modal-1_close close">
+			<img src="img/icon/close.svg" alt="close" width="25" height="25">
+		</button>
+			
+		<div>
+			<h3>Дмитрий</h3>
+			<a href="https://www.youtube.com/watch?v=WZSyzHTD88A&t=8s">Skoda Fabia, 1.2 бензин, 2011 г.</a>
+		</div>
+
+		<iframe src="https://www.youtube.com/embed/WZSyzHTD88A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
 	<div class="modal" id="order">
 		<form action="sendmail.php" class="call-back-form form" method="post">
 
