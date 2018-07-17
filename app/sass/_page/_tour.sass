@@ -142,135 +142,56 @@
 			.question__form
 				margin-top: 20px
 
-@media only screen and (max-width : 1200px)
-	.tour
-		.main
-			.steps
-				h2
-					margin-bottom: 35px
+		.services
+			padding-top: 30px
+			padding-bottom: 70px
 
-			.advantages-steps
-				p
-					margin-bottom: 30px
+			span
+				font-family: $title
+				font-size: 30px
+				color: $accent
+				font-weight: 300
+				margin-bottom: 80px
+				display: block
 
-				&__wrap
-					margin: 0
-					p
-						margin: 0
+			h2
+				font-size: 48px
+				line-height: normal
+				position: relative
+				margin-bottom: 25px
 
-				&__list
-					margin-bottom: 0
+			p
+				line-height: 1.36
+				font-size: 22px
+				color: $accent
+				font-weight: 700
+				margin-bottom: 28px
 
-			.services-form
-					form
-						width: 90%
+			b
+				font-weight: 400
 
-@media only screen and (max-width : 992px)
-	.tour
-		.main
-			.advantages-steps
-				&__wrap
-					justify-content: space-between
-					margin: 0
-
-				&__list
-					margin: 0
-					&::after
-						font-size: 200px
-
-			.services-form
-					form
-						width: 100%
-
-						div
-							width: 32%
-
-						input
-							width: 100%
-
-						.btn
-							width: 100%
-
-			.step-tour
+			.button-wrap
+				display: flex
+				flex-direction: row
 				justify-content: space-between
-				flex-wrap: wrap
-				margin-bottom: 0
-				.step-tour__item
-					width: 100%
-					margin-right: 0
-					margin-bottom: 30px
-					&::after
-						font-size: 70px
-						top: 0
-						right: 15px
 
-@media only screen and (max-width : 767px)
-	.tour
-		.main
-			.advantages-steps
-				&__list
-					width: 100%
-					margin: 0
-					&::after
-						font-size: 80px
-						top: 20px
-
-				.steps
-					padding-bottom: 30px
-					&__item
-						&::after
-							font-size: 80px
-							top: 10px
-							right: 15px
-
-			.why-tour
-				padding: 30px 0
-				&__list
+				.services-btn
+					background-color: #0f2a44
+					width: 280px
+					height: 82px
+					border-radius: 2px
+					font-family: $title	
+					font-size: 28px
+					font-weight: 600
+					line-height: 1.07
+					text-align: center
+					color: $accent
 					display: flex
-					flex-direction: column
-
-				.item
-					width: 100%
-					margin-bottom: 0
-
-				.list .question__form form
-					display: flex
-					flex-direction: column
-					margin: 0
-					input
-						width: 100%
-
-					div
-						margin-right: 0
-						margin-bottom: 10px
-						&:last-child
-							margin-bottom: 15px
-
-
-				.list
-					.second-list
-						width: 100%
-						margin-bottom: 0
-
-					.last-column
-						margin-bottom: 0
-						margin-top: 30px
-						width: 100%
-			
-
-@media only screen and (max-width : 576px)
-	.tour
-		h2
-			br
-				display: none
-				
-		.main
-			.services-form
-					form
-						flex-wrap: wrap
-
-						div
-							width: 100%
-							margin-bottom: 15px
-							&:last-child
-								margin-bottom: 0
+					align-items: center
+					justify-content: center
+					&:hover
+						background-color: $accent
+						color: #fff
+					&:focus
+						background-color: $accent
+						color: #fff

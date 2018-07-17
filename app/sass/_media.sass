@@ -188,6 +188,28 @@
 			span
 				font-size: 18px
 	
+	.tour
+		.main
+			.steps
+				h2
+					margin-bottom: 35px
+
+			.advantages-steps
+				p
+					margin-bottom: 30px
+
+				&__wrap
+					margin: 0
+					p
+						margin: 0
+
+				&__list
+					margin-bottom: 0
+
+			.services-form
+					form
+						width: 90%
+
 	.auction
 		.main
 			.why-auction
@@ -532,6 +554,44 @@
 		table
 			display: none
 	
+	.tour
+		.main
+			.advantages-steps
+				&__wrap
+					justify-content: space-between
+					margin: 0
+
+				&__list
+					margin: 0
+					&::after
+						font-size: 200px
+
+			.services-form
+					form
+						width: 100%
+
+						div
+							width: 32%
+
+						input
+							width: 100%
+
+						.btn
+							width: 100%
+
+			.step-tour
+				justify-content: space-between
+				flex-wrap: wrap
+				margin-bottom: 0
+				.step-tour__item
+					width: 100%
+					margin-right: 0
+					margin-bottom: 30px
+					&::after
+						font-size: 70px
+						top: 0
+						right: 15px
+
 	.auto-fit
 		h1 
 			span
@@ -944,6 +1004,58 @@
 			.list
 				margin-bottom: 0
 
+	.tour
+		.main
+			.advantages-steps
+				&__list
+					width: 100%
+					margin: 0
+					&::after
+						font-size: 80px
+						top: 20px
+
+				.steps
+					padding-bottom: 30px
+					&__item
+						&::after
+							font-size: 80px
+							top: 10px
+							right: 15px
+
+			.why-tour
+				padding: 30px 0
+				&__list
+					display: flex
+					flex-direction: column
+
+				.item
+					width: 100%
+					margin-bottom: 0
+
+				.list .question__form form
+					display: flex
+					flex-direction: column
+					margin: 0
+					input
+						width: 100%
+
+					div
+						margin-right: 0
+						margin-bottom: 10px
+						&:last-child
+							margin-bottom: 15px
+
+
+				.list
+					.second-list
+						width: 100%
+						margin-bottom: 0
+
+					.last-column
+						margin-bottom: 0
+						margin-top: 30px
+						width: 100%
+			
 	.auto-fit
 		.services
 			padding: 30px 0
@@ -1630,6 +1742,26 @@
 				.title
 					bottom: 20px
 	
+	.tour
+		h2
+			br
+				display: none
+				
+		.main
+			.services
+				h2
+					font-size: 28px
+
+			.services-form
+					form
+						flex-wrap: wrap
+
+						div
+							width: 100%
+							margin-bottom: 15px
+							&:last-child
+								margin-bottom: 0
+
 	.auto-fit 
 		.header-section__left 
 			p
@@ -1956,6 +2088,16 @@
 						width: 100%
 						margin-bottom: 15px
 	
+	.tour
+		.main
+			.services
+				.button-wrap
+					flex-wrap: wrap
+					.services-btn
+						height: 55px
+						width: 100%
+						font-size: 20px
+
 	.auto-fit 
 		.five-services
 			background-size: 70%
