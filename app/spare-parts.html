@@ -12,14 +12,46 @@
 
 	<link rel="stylesheet" href="css/main.min.css">
 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116286969-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116286969-1');
+</script>
+
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '737617393296645');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=737617393296645&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
 </head>
 
 <body class="spare-parts page-inner">
-
+<!-- 
 	<div class="preloader">
 		<div class="pulse"></div>
 	</div>
-
+ -->
 
 	<div class="wrapper">
 		
@@ -151,7 +183,7 @@
 						</div>
 						<div class="navigation">
 							<ul>
-<!-- 								<li><a href="#">О КОМПАНИИ</a></li>
+			<!-- 								<li><a href="#">О КОМПАНИИ</a></li>
 								<li><a href="#">ВИДЕООБЗОРЫ</a></li>
 								<li><a href="#">ГАРАНТИИ</a></li>
 								<li><a href="#">ВОПРОСЫ</a></li>
@@ -218,78 +250,111 @@
 						</div>
 
 						<h2>или заполните форму и мы найдем для Вас то что вы ищете</h2>
-
-						<div class="calculator__form_line">
-							<div class="calculator__form_input">
-								<label for="type">Тип транспорта</label>
-								<select name="type" id="type">
-									<option value="Легковой">Запчасти для легковых автомобилей</option>
-									<option value="Грузовой">Грузовой</option>
-									<option value="Легковой">Електро</option>
-									<option value="Легковой">Мотоцыкл</option>
-									<option value="Грузовой">Автобус</option>
-								</select>
-							</div>
-							<div class="calculator__form_input">
-								<label for="details">Тип деталей</label>
-								<select name="details" id="details">
-									<option selected disabled>Выберите из списка</option>
-									<option value="Chevrolet">Chevrolet</option>
-									<option value="BMW">BMW</option>
-								</select>
-							</div>
-						</div>
 						
-
-						<div class="calculator__form_block">
-							
-							<div class="calculator__form_item">
-								<label for="mark">Марка</label>
-								<select name="mark" id="mark">
-									<option selected disabled>Выберите из списка</option>
-									<option value="Chevrolet">Chevrolet</option>
-									<option value="BMW">BMW</option>
-								</select>
-							</div>
-							
-							<div class="calculator__form_item">
-								<label for="model">Модель</label>
-								<select name="model" id="model">
-									<option selected disabled>Выберите из списка</option>
-									<option value="Chevrolet">Chevrolet</option>
-									<option value="BMW">BMW</option>
-								</select>
-							</div>
-
-							<div class="calculator__form_item">
-								<label for="year">Года выпуска</label>
-								<select name="year" id="year">
-									<option selected disabled>Выберите из списка</option>
-									<option value="Chevrolet">Chevrolet</option>
-									<option value="BMW">BMW</option>
-								</select>
+						<div class="spare-parts__wrap">
+							<div class="calculator__form_line">
+								<div class="calculator__form_input">
+									<label for="type">Тип транспорта</label>
+									<select name="type" id="type">
+										<option value="Запчасти для легковых  автомобилей">Запчасти для легковых  автомобилей</option>
+										<option value="Запчасти для Грузовых автомобилей">Запчасти для Грузовых автомобилей</option>
+										<option value="Запчасти для мотоциклов">Запчасти для мотоциклов</option>
+										<option value="Запчасти для микроавтобусов и автобусов">Запчасти для микроавтобусов и автобусов</option>
+										<option value="Запчасти для сельско- и лесохозяйственной техники">Запчасти для сельско- и лесохозяйственной техники</option>
+									</select>
+								</div>
+								<div class="calculator__form_input">
+									<label for="details">Тип деталей</label>
+									<select name="details" id="details">
+										<option selected disabled>Выберите из списка</option>
+										<option value="Электрические детали">Электрические детали</option>
+										<option value="Детали кузова">Детали кузова</option>
+										<option value="Детали Салона">Детали Салона</option>
+										<option value="Детали двигателя">Детали двигателя</option>
+										<option value="Ходовая, рулевой механизм, трансмиссия">Ходовая, рулевой механизм, трансмиссия</option>
+										<option value="Тормозная система">Тормозная система</option>
+										<option value="Система выхлопа">Система выхлопа</option>
+										<option value="Система охлаждения">Система охлаждения</option>
+									</select>
+								</div>
 							</div>
 
-							<div class="calculator__form_item">
-								<label for="body">Тип кузова</label>
-								<select name="body" id="body">
-									<option selected disabled>Выберите из списка</option>
-									<option value="Chevrolet">Chevrolet</option>
-									<option value="BMW">BMW</option>
-								</select>
-							</div>
+							<div class="calculator__form_block">
+								
+								<div class="calculator__form_item">
+									<label for="mark">Марка</label>
+									<select name="mark" id="mark">
+										<option selected disabled>Выберите из списка</option>
+										<option value="Chevrolet">Chevrolet</option>
+										<option value="BMW">BMW</option>
+									</select>
+								</div>
+								
+								<div class="calculator__form_item">
+									<label for="model">Модель</label>
+									<select name="model" id="model">
+										<option selected disabled>Выберите из списка</option>
+										<option value="Chevrolet">Chevrolet</option>
+										<option value="BMW">BMW</option>
+									</select>
+								</div>
 
-							<div class="calculator__form_item">
-								<label for="fuel">Тип топлива</label>
-								<select name="fuel" id="fuel">
-									<option selected disabled>Выберите из списка</option>
-									<option value="Chevrolet">Chevrolet</option>
-									<option value="BMW">BMW</option>
-								</select>
-							</div>
+								<div class="calculator__form_item">
+									<label for="year">Год выпуска</label>
+									<select name="year" id="year">
+										<option value="1998">1998</option>
+										<option value="1999">1999</option>
+										<option value="2001">2001</option>
+										<option value="2002">2002</option>
+										<option value="2003">2003</option>
+										<option value="2004">2004</option>
+										<option value="2005">2005</option>
+										<option value="2006">2006</option>
+										<option value="2007">2007</option>
+										<option value="2008">2008</option>
+										<option value="2009">2009</option>
+										<option value="2010">2010</option>
+										<option value="2011">2011</option>
+										<option value="2012">2012</option>
+										<option value="2013">2013</option>
+										<option value="2014">2014</option>
+										<option value="2015">2015</option>
+										<option value="2016">2016</option>
+										<option value="2017">2017</option>
+										<option value="2018">2018</option>
+									</select>
+								</div>
 
-							<div class="calculator__form_item">
-								<a href="#add-detail" id="add-detail">+ Добавить еще одну деталь</a>
+								<div class="calculator__form_item">
+									<label for="body">Тип кузова</label>
+									<select name="bodywork" id="bodywork">
+										<option value="Cедан">Cедан</option>
+										<option value="Универсал">Универсал</option>
+										<option value="Хэтчбэк">Хэтчбэк</option>
+										<option value="Купе">Купе</option>
+										<option value="Лимузин">Лимузин</option>
+										<option value="Микроавтобус">Микроавтобус</option>
+										<option value="Минивэн">Минивэн</option>
+										<option value="Хардтоп">Хардтоп</option>
+										<option value="Комби">Комби</option>
+										<option value="Лифтбэк">Лифтбэк</option>
+										<option value="Фастбэк">Фастбэк</option>
+									</select>
+								</div>
+
+								<div class="calculator__form_item">
+									<label for="fuel">Тип топлива</label>
+									<select name="fuel" id="fuel">
+										<option value="Дизель">Дизель</option>
+										<option value="Бензиновый">Бензиновый</option>
+										<option value="Електро">Електро</option>
+										<option value="Гибрид">Гибрид</option>
+									</select>
+								</div>
+
+								<div class="calculator__form_item">
+									<a href="#add-detail" id="add-detail" class="add-detail">+ Добавить еще одну деталь</a>
+								</div>
 							</div>
 						</div>
 
@@ -356,7 +421,7 @@
 
 	<!-- modal -->
 	<div class="modal" id="order">
-		<form action="sendmail.php" class="call-back-form form" method="post">
+		<form action="sendmail.php" class="order-form form" method="post">
 
 			<input type="hidden" name="subject" value="ЗАКАЗАТЬ АВТО">
 			
@@ -372,13 +437,14 @@
 			</p>
 
 			<div><input type="text" class="form__field" name="name" placeholder="Введите ваше имя" required></div>
-			<div><input type="tel" name="phone" class="form__field" required placeholder="и номер телефона" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+			<div><input type="tel" name="phone" class="form__field" required placeholder="и номер телефона" pattern="\[0-9]{3}-s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
 			<button class="btn btn-active button" name="submit" value="отправить">ЗАКАЗАТЬ АВТО</button>
 
 		</form>
 	</div>
+
 	<div class="modal" id="call-back">
-			<form action="sendmail.php" class="call-back-form form" method="post">
+			<form action="sendmail.php" class="call-back form" method="post">
 
 				<input type="hidden" name="subject" value="Обратный звонок">
 				
@@ -400,6 +466,28 @@
 			</form>
 	</div>
 
+	<div class="modal" id="more">
+		<form action="sendmail.php" class="more-form form" method="post">
+
+			<input type="hidden" name="subject" value="Узнать подробнее">
+			
+			<button class="more_close close">
+				<img src="img/icon/close.svg" alt="close" width="25" height="25">
+			</button>
+
+			<p class="sub-title">
+				Чтобы узнать подробности о стоимости пригона и
+				<br> растаможки, такого или другого автомобиля Евро 5,
+				<br> оставьте свои контакты и наши менеджеры свяжутся с
+				<br> Вами в течении 10-ти минут
+			</p>
+
+			<div><input type="text" class="form__field" name="name" placeholder="Введите ваше имя" required></div>
+			<div><input type="tel" name="phone" class="form__field" required placeholder="и номер телефона" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+			<button class="btn btn-active button" name="submit" value="отправить">Узнать подробнее</button>
+
+		</form>
+	</div>
 
 	<div class="modal" id="thanks">
 		<button class="close thanks_close" type="button">

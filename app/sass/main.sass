@@ -1,7 +1,6 @@
 @import "libs"
 @import "base"
 
-
 .index
 	.header
 		position: fixed
@@ -33,15 +32,12 @@
 	position: fixed
 	left: 0
 	top: 0
-	z-index: 2000
+	z-index: 3000
 	width: 240px
 	height: 100%
 	background-color: $text
 	padding: 55px 35px
 	text-align: center
-	transition: all .3s
-	// overflow: visible
-	// overflow-y: auto
 	&::-webkit-scrollbar
 		width: 0
 
@@ -93,13 +89,17 @@
 			display: none
 			position: absolute
 			top: 0
-			left: 180px
+			left: 170px
 			width: 220px
-			height: auto
 			background-color: $accent
 			padding: 15px
 			border-radius: 2px
 			z-index: 500
+			max-height: 350px
+			min-height: 110%
+			overflow: auto
+			&::-webkit-scrollbar
+				width: 0
 			&::before
 				content: ''
 				position: absolute

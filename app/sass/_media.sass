@@ -58,8 +58,14 @@
 				width: 40.40%
 
 	.nav
+		padding: 35px
+		.logo
+			margin-bottom: 30px
 		&__item
 			padding: 19px 0
+
+		&__list
+			margin-bottom: 30px
 
 	.container-left
 		max-width: 100%
@@ -2217,4 +2223,14 @@
 		.content 
 			h2
 				font-size: 25px
-				
+
+
+
+@media only screen and (max-height : 900px)
+	.nav
+		overflow: auto
+		&__item
+			ul
+				left: -20px
+				top: 90%
+				min-height: auto

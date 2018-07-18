@@ -1,13 +1,17 @@
 $(function() {
 
+
+
 //----------------------------------форма здобавляням полів-----------------------------------
 
-$("#pluse-link").on('click', function() {
-  $('.pluse-link').append('<input type="text" name="dynamic[]" placeholder="Вставьте сюда ссылку на запчасть">').fadeIn('slow');
+$("#pluse-link").on('click', function(index, el) {
+
+  $('.pluse-link').append('<input type="text" name="" placeholder="Вставьте сюда ссылку на запчасть">').fadeIn('slow');
+
 });
 
-$("#add-detail").on('click', function() {
-  $('.spare-parts__add').append('<div class="add-detail"><input type="text" name="dynamic[]"  placeholder="Вставьте сюда запчасть"></div>').fadeIn('slow');
+$(".add-detail").on('click', function() {
+  $(".spare-parts__wrap").clone().appendTo(".spare-parts__add");
 });
 
 
@@ -210,30 +214,38 @@ $('.ham').click(function() {
   $('.modal').popup({transition: 'all 0.3s'});
 
 //------------------------------------form-------------------------------------------
-	$('input[type="tel"]').mask('000-000-00-00');
+  $('input[type="tel"]').mask('000-000-00-00');
 
-	jQuery.validator.addMethod("phoneno", function(phone_number, element) {
-	   return this.optional(element) || phone_number.match(/[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/);
-	}, "Введите Ваш телефон");
+  jQuery.validator.addMethod("phoneno", function(phone_number, element) {
+     return this.optional(element) || phone_number.match(/[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/);
+  }, "Введите Ваш телефон");
 
-  $(".portfolio-form").validate({
-    messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
-    },
-    rules: {
-      "phone": {
-        required: true,
-        phoneno: true
+
+  $(".portfolio-form").each(function(index, el) {
+    $(el).addClass('portfolio-form-' + index);
+
+    $('.portfolio-form-' + index).validate({
+      rules: {
+        phone: {
+          required: true,
+          phoneno: true
+        },
+        name: 'required',
+      },
+      messages: {
+        name: "Введите Ваше имя",
+        phone: "Введите Ваш телефон",
+      },
+      submitHandler: function(form) {
+        var t = {
+          name: jQuery('.portfolio-form-' + index).find("input[name=name]").val(),
+          phone: jQuery('.portfolio-form-' + index).find("input[name=phone]").val(),
+          subject: jQuery('.portfolio-form-' + index).find("input[name=subject]").val()
+        };
+        ajaxSend('.portfolio-form-' + index, t);
       }
-    },
-    submitHandler: function(form) {
-      var t = {
-        phone: jQuery(".portfolio-form").find("input[name=phone]").val(),
-        subject: jQuery(".portfolio-form").find("input[name=subject]").val(),
-      };
-      ajaxSend('.portfolio-form', t);
-    }
+    });
+
   });
 
   $(".contact-form").validate({
@@ -300,8 +312,8 @@ $('.ham').click(function() {
     }
   });
 
-  $(".call-back-form").validate({
-    messages: {
+  $(".call-back").validate({
+   messages: {
       name: "Введите ваше Имя",
       phone: "Введите ваш телефон",
     },
@@ -313,14 +325,76 @@ $('.ham').click(function() {
     },
     submitHandler: function(form) {
       var t = {
-        name: jQuery(".call-back-form").find("input[name=name]").val(),
-        phone: jQuery(".call-back-form").find("input[name=phone]").val(),
-        subject: jQuery(".call-back-form").find("input[name=subject]").val(),
+        name: jQuery(".call-back").find("input[name=name]").val(),
+        phone: jQuery(".call-back").find("input[name=phone]").val(),
+        subject: jQuery(".call-back").find("input[name=subject]").val(),
       };
-      ajaxSend('.call-back-form', t);
+      ajaxSend('.call-back', t);
     }
   });
 
+  $(".order-form").validate({
+   messages: {
+      name: "Введите ваше Имя",
+      phone: "Введите ваш телефон",
+    },
+    rules: {
+      "phone": {
+        required: true,
+        phoneno: true
+      }
+    },
+    submitHandler: function(form) {
+      var t = {
+        name: jQuery(".order-form").find("input[name=name]").val(),
+        phone: jQuery(".order-form").find("input[name=phone]").val(),
+        subject: jQuery(".order-form").find("input[name=subject]").val(),
+      };
+      ajaxSend('.order-form', t);
+    }
+  });
+
+  $(".more-form").validate({
+   messages: {
+      name: "Введите ваше Имя",
+      phone: "Введите ваш телефон",
+    },
+    rules: {
+      "phone": {
+        required: true,
+        phoneno: true
+      }
+    },
+    submitHandler: function(form) {
+      var t = {
+        name: jQuery(".more-form").find("input[name=name]").val(),
+        phone: jQuery(".more-form").find("input[name=phone]").val(),
+        subject: jQuery(".more-form").find("input[name=subject]").val(),
+      };
+      ajaxSend('.more-form', t);
+    }
+  });
+
+  $(".modal-form").validate({
+   messages: {
+      name: "Введите ваше Имя",
+      phone: "Введите ваш телефон",
+    },
+    rules: {
+      "phone": {
+        required: true,
+        phoneno: true
+      }
+    },
+    submitHandler: function(form) {
+      var t = {
+        name: jQuery(".modal-form").find("input[name=name]").val(),
+        phone: jQuery(".modal-form").find("input[name=phone]").val(),
+        subject: jQuery(".modal-form").find("input[name=subject]").val(),
+      };
+      ajaxSend('.modal-form', t);
+    }
+  });
 
   $(".calculator-form").validate({
     messages: {
@@ -422,6 +496,6 @@ $('.ham').click(function() {
 
 //----------------------------------------preloader----------------------------------
 
-$(window).on('load', function(){
-  $('.preloader').delay(1000).fadeOut('slow');
-});
+// $(window).on('load', function(){
+//   $('.preloader').delay(1000).fadeOut('slow');
+// });
