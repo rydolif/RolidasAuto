@@ -12,6 +12,34 @@
 
 	<link rel="stylesheet" href="css/main.min.css">
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116286969-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116286969-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '737617393296645');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=737617393296645&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
 </head>
 
 <body class="index">
@@ -48,7 +76,7 @@
 						</ul>
 					</li>
 
-					<li class="nav__item"><a href="calculator.html">Таможенный калькулятор</a></li>
+					<li class="nav__item"><a href="stub.html">Таможенный калькулятор</a></li>
 
 					<li class="nav__item"><a href="auction.html">АВТО С АУКЦИОНОВ</a>
 						<ul>
@@ -74,9 +102,9 @@
 						</ul>
 					</li>
 
-					<li class="nav__item"><a href="spare-parts.html">ДОСТАВКА ЗАПЧАСТЕЙ</a>
+					<li class="nav__item"><a href="stub.html">ДОСТАВКА ЗАПЧАСТЕЙ</a>
 						<ul>
-							<li><a href="spare-parts.html#spare-parts__container">Как заказать доставку</a></li>
+							<li><a href="stub.html">Как заказать доставку</a></li>
 						</ul>
 					</li>
 					
@@ -115,6 +143,11 @@
 						<a href="#" class="btn btn-active order order_open">ЗАКАЗАТЬ АВТО</a>
 					</div>
 
+					<div class="header__nav_tel">
+						<a href="tel:0678000144" class="call">067 800 01 44</a>
+						<a href="tel:0504078836" class="call">050 407 88 36</a>
+					</div>
+
 					<button class="hamburger ham" type="button">
 						<span class="hamburger__box">
 							<span class="hamburger__item"></span>
@@ -140,19 +173,27 @@
 							<div>
 								<ul>
 									<li><a href="inner.html">ПРИГОН АВТО</a></li>
-									<li><a href="calculator.html">Таможенный калькулятор</a></li>
+									<li><a href="stub.html">Таможенный калькулятор</a></li>
 									<li><a href="auction.html">АВТО С АУКЦИОНОВ</a></li>
 									<li><a href="electric-cars.html">ЭЛЕКТРОКАРЫ</a></li>
 									<li><a href="tour.html">Туры за авто в Европу</a></li>
-									<li><a href="spare-parts.html">ДОСТАВКА ЗАПЧАСТЕЙ</a></li>
+									<li><a href="stub.html">ДОСТАВКА ЗАПЧАСТЕЙ</a></li>
 									<li><a href="services.html">ДРУГИЕ УСЛУГИ</a></li>
 								</ul>
 							</div>
+
 							<div class="info">
 								<a href="tel:0678000144" class="call">067 800 01 44</a>
 								<a href="#" class="btn call-back_open">Обратный звонок</a>
 								<a href="tel:0504078836" class="call">050 407 88 36</a>
+								
+								<div>
+									<a href="viber://chat?number=+380962723724"><i class="fab fa-viber"></i></a>
+									<a href="whatsapp://send?phone=+380962723724"><i class="fab fa-whatsapp-square"></i></a>
+									<a href="tg://resolve?domain=+380962723724"><i class="fab fa-telegram"></i></a>
+								</div>
 							</div>
+							
 						</div>
 						<div class="navigation">
 							<ul>
@@ -333,7 +374,7 @@
 
 						<div class="banner__block">
 							<img src="img/index-banner/banner2.png" alt="img">
-							<h3><a href="calculator.html" class="link">Таможенный калькулятор</a></h3>
+							<h3><a href="stub.html" class="link">Таможенный калькулятор</a></h3>
 						</div>
 					</div>
 				</div>
@@ -711,9 +752,14 @@
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2680340490165!2d26.26280927773314!3d50.61537890142202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f135b328d81d5%3A0x79fa5436ef36b10!2z0LLRg9C70LjRhtGPINCa0L3Rj9Cz0LjQvdGWINCe0LvRjNCz0LgsIDUsIDMxNywg0KDRltCy0L3QtSwg0KDRltCy0L3QtdC90YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDMzMDAw!5e0!3m2!1sru!2sua!4v1529414176102"></iframe>
 				<div class="container">
 					<div class="map__info">
-						<div>
+						<div class="map__info_tel">
 							<a href="tel:(067)8000144" class="call">(067) 800 01 44</a>
 							<a href="tel:(050)4078836" class="call">(050) 407 88 36</a>
+						</div>
+						<div class="map__info_info">
+							<a href="viber://chat?number=+380962723724"><i class="fab fa-viber"></i></a>
+							<a href="whatsapp://send?phone=+380962723724"><i class="fab fa-whatsapp-square"></i></a>
+							<a href="tg://resolve?domain=+380962723724"><i class="fab fa-telegram"></i></a>
 						</div>
 						<p>г. Ровно, <br>ул.Княгини Ольги 5, <br>офис 317</p>
 					</div>

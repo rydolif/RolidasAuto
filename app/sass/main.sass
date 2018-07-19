@@ -1,6 +1,11 @@
 @import "libs"
 @import "base"
 
+.stub
+	h1
+		text-align: center
+		margin-top: 30%
+
 .index
 	.header
 		position: fixed
@@ -28,6 +33,19 @@
 		max-width: 1190px
 		padding-left: 0
 
+.ui-widget.ui-widget-content
+	border: none
+	outline: none
+
+.ui-state-active
+	background-color: $text
+
+.ui-menu .ui-menu-item-wrapper
+	padding: 0
+
+.ui-menu .ui-menu-item
+	margin-bottom: 10px
+
 .nav
 	position: fixed
 	left: 0
@@ -43,18 +61,39 @@
 
 	&__list
 		margin-bottom: 65px
+		border: none
+		outline: none
+		background-color: $text
 
 	&__item
 		position: relative
 		padding: 20px 0
 
 		&:hover
+			outline: none
 			ul
 				display: block
+			a
+				background-color: $text
+				border: none
+
+			li
+				a
+					background-color: $accent
+					border: none
 
 		&:focus
+			outline: none
 			ul
 				display: block
+			a
+				background-color: $text
+				border: none
+
+			li
+				a
+					background-color: $accent
+					border: none
 
 		&::before
 			content: ""
@@ -84,6 +123,9 @@
 				color: $accent
 			&:focus
 				color: $accent
+
+			span
+				display: none
 		
 		ul
 			display: none
@@ -95,18 +137,15 @@
 			padding: 15px
 			border-radius: 2px
 			z-index: 500
-			max-height: 350px
-			min-height: 110%
-			overflow: auto
 			&::-webkit-scrollbar
 				width: 0
-			&::before
-				content: ''
-				position: absolute
-				left: -25px
-				top: 10px
-				border: 15px solid transparent
-				border-right: 15px solid $accent
+			// &::before
+			// 	content: ''
+			// 	position: absolute
+			// 	left: -25px
+			// 	top: 10px
+			// 	border: 15px solid transparent
+			// 	border-right: 15px solid $accent
 
 		li
 			margin-bottom: 10px
@@ -130,6 +169,8 @@
 	width: 163px
 	height: 50px
 	margin-bottom: 90px
+	position: relative
+	color: $accent
 
 .info
 	display: flex
@@ -177,6 +218,9 @@
 		justify-content: space-between
 		transition: all .3s
 		
+		&_tel
+			display: none
+
 		.logo
 			.btn
 				display: none
@@ -965,13 +1009,6 @@
 		color: #fff
 		ff
 
-	a
-		font-family: $title
-		color: $accent
-		font-size: 28px
-		font-weight: 600
-		line-height: 43px
-		margin-bottom: 0
 
 	&__info
 		padding: 43px 0
@@ -979,10 +1016,29 @@
 		display: flex
 		flex-direction: column
 
-		div
-			margin-bottom: 50px
+		&_tel
+			margin-bottom: 10px
 			display: flex
 			flex-direction: column
+			a
+				font-family: $title
+				color: $accent
+				font-size: 28px
+				font-weight: 600
+				line-height: 43px
+				margin-bottom: 0
+
+		&_info
+			margin-bottom: 10px
+			i
+				font-size: 22px
+			a
+				color: #fff
+				margin-right: 7px
+				&:hover
+					color: $accent
+				&:focus
+					color: $accent
 
 .content
 	padding-top: 65px
