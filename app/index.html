@@ -140,7 +140,7 @@
 						<a href="index.html">
 							<img src="img/logo-dark.png" alt="logo" width="160" height="50">
 						</a>
-						<a href="#" class="btn btn-active order order_open">ЗАКАЗАТЬ АВТО</a>
+						<a href="#" class="btn btn-active order order_open">Перезвоните мне</a>
 					</div>
 
 					<div class="header__nav_tel">
@@ -188,7 +188,7 @@
 								<a href="tel:0504078836" class="call">050 407 88 36</a>
 								
 								<div>
-									<a href="viber://chat?number=+380962723724"><i class="fab fa-viber"></i></a>
+									<a href="viber://add?number=+380962723724"><i class="fab fa-viber"></i></a>
 									<a href="whatsapp://send?phone=+380950707808"><i class="fab fa-whatsapp-square"></i></a>
 									<a href="https://t.me/rolidas_auto"><i class="fab fa-telegram"></i></a>
 									<a href="skype:live:88254f3ca035d14d?call"><i class="fab fa-skype"></i></a>
@@ -235,7 +235,7 @@
 						<a href="tour.html" class="header__content_item">Туры в Европу <br>за автомобилем</a>
 						<a href="electric-cars.html" class="header__content_item">Электрокары из США <br>и Европы</a>
 						<a href="inner.html" class="header__content_item">Пригон автомобиля <br>без растаможки</a>
-						<a href="auction.html" class="header__content_item">Доставка и растаможка спецтехники <br>из Европы, США и Канады</a>
+						<a href="stub.html" class="header__content_item">Доставка Б.У. и новых запчастей с Европы, США и Канады</a>
 					</div>
 
 				</div>
@@ -862,7 +862,7 @@
 	<div class="modal" id="order">
 		<form action="sendmail.php" class="order-form form" method="post">
 
-			<input type="hidden" name="subject" value="ЗАКАЗАТЬ АВТО">
+			<input type="hidden" name="subject" value="Перезвоните мне">
 			
 			<button class="order_close close">
 				<img src="img/icon/close.svg" alt="close" width="25" height="25">
@@ -877,7 +877,7 @@
 
 			<div><input type="text" class="form__field" name="name" placeholder="Введите ваше имя" required></div>
 			<div><input type="tel" name="phone" class="form__field" required placeholder="и номер телефона" pattern="\[0-9]{3}-s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
-			<button class="btn btn-active button" name="submit" value="отправить">ЗАКАЗАТЬ АВТО</button>
+			<button class="btn btn-active button" name="submit" value="отправить">Перезвоните мне</button>
 
 		</form>
 	</div>
@@ -918,5 +918,14 @@
 
 	<script src="js/scripts.min.js"></script>
 	<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=4838609905647616"></script>
+
+	<script type="text/javascript">
+  (function(d, w, s) {
+	var widgetHash = '5kc8ev1pmzxq7wc8pmiy', ctw = d.createElement(s); ctw.type = 'text/javascript'; ctw.async = true;
+	ctw.src = '//widgets.binotel.com/calltracking/widgets/'+ widgetHash +'.js';
+	var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(ctw, sn);
+  })(document, window, 'script');
+	</script>
+
 </body>
 </html>
